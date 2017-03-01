@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Wed Mar  1 13:00:20 2017
+# Generated: Wed Mar  1 13:07:32 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -67,9 +67,9 @@ class top_block(gr.top_block, Qt.QWidget):
         self.systemfs = systemfs = 38400000
         self.samp_rate = samp_rate = 38400000
         self.mu = mu = 0.0005
-        self.f3 = f3 = 0.3
+        self.f3 = f3 = 0.1
         self.f2 = f2 = 0
-        self.f1 = f1 = -0.3
+        self.f1 = f1 = -0.1
         self.alpha_real = alpha_real = 0
         self.alpha_imag = alpha_imag = 0
         self.a3 = a3 = 1
@@ -94,13 +94,13 @@ class top_block(gr.top_block, Qt.QWidget):
         self.tab.addTab(self.tab_widget_1, "Convergence")
         self.top_layout.addWidget(self.tab)
         self.probe_signal = blocks.probe_signal_c()
-        self._f3_range = Range(-1, 1, 0.001, 0.3, 200)
+        self._f3_range = Range(-0.5, 0.5, 0.001, 0.1, 200)
         self._f3_win = RangeWidget(self._f3_range, self.set_f3, "f3", "counter_slider", float)
         self.tab_grid_layout_0.addWidget(self._f3_win,  0, 2, 1, 1)
-        self._f2_range = Range(-1, 1, 0.001, 0, 200)
+        self._f2_range = Range(-0.5, 0.5, 0.001, 0, 200)
         self._f2_win = RangeWidget(self._f2_range, self.set_f2, "f2", "counter_slider", float)
         self.tab_grid_layout_0.addWidget(self._f2_win,  0, 1, 1, 1)
-        self._f1_range = Range(-1, 1, 0.001, -0.3, 200)
+        self._f1_range = Range(-0.5, 0.5, 0.001, -0.1, 200)
         self._f1_win = RangeWidget(self._f1_range, self.set_f1, "f1", "counter_slider", float)
         self.tab_grid_layout_0.addWidget(self._f1_win,  0, 0, 1, 1)
         self._a3_range = Range(0, 2, 0.01, 1, 200)

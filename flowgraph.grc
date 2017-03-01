@@ -120,7 +120,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1016, 401)</value>
+      <value>(1016, 385)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -386,7 +386,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>-0.3</value>
+      <value>-0.1</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -422,7 +422,7 @@
     </param>
     <param>
       <key>start</key>
-      <value>-1</value>
+      <value>-0.5</value>
     </param>
     <param>
       <key>step</key>
@@ -430,7 +430,7 @@
     </param>
     <param>
       <key>stop</key>
-      <value>1</value>
+      <value>0.5</value>
     </param>
     <param>
       <key>rangeType</key>
@@ -485,7 +485,7 @@
     </param>
     <param>
       <key>start</key>
-      <value>-1</value>
+      <value>-0.5</value>
     </param>
     <param>
       <key>step</key>
@@ -493,7 +493,7 @@
     </param>
     <param>
       <key>stop</key>
-      <value>1</value>
+      <value>0.5</value>
     </param>
     <param>
       <key>rangeType</key>
@@ -512,7 +512,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>0.3</value>
+      <value>0.1</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -548,7 +548,7 @@
     </param>
     <param>
       <key>start</key>
-      <value>-1</value>
+      <value>-0.5</value>
     </param>
     <param>
       <key>step</key>
@@ -556,7 +556,7 @@
     </param>
     <param>
       <key>stop</key>
-      <value>1</value>
+      <value>0.5</value>
     </param>
     <param>
       <key>rangeType</key>
