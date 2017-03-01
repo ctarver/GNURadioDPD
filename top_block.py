@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Wed Mar  1 12:21:35 2017
+# Generated: Wed Mar  1 13:00:20 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -19,12 +19,14 @@ if __name__ == '__main__':
 from PyQt4 import Qt
 from gnuradio import analog
 from gnuradio import blocks
+from gnuradio import channels
 from gnuradio import eng_notation
 from gnuradio import filter
 from gnuradio import gr
 from gnuradio import qtgui
 from gnuradio.eng_option import eng_option
 from gnuradio.filter import firdes
+from gnuradio.qtgui import Range, RangeWidget
 from optparse import OptionParser
 import Test
 import sip
@@ -65,18 +67,51 @@ class top_block(gr.top_block, Qt.QWidget):
         self.systemfs = systemfs = 38400000
         self.samp_rate = samp_rate = 38400000
         self.mu = mu = 0.0005
-        self.f3 = f3 = 8000000
-        self.f2 = f2 = -4000000
-        self.f1 = f1 = -8000000
+        self.f3 = f3 = 0.3
+        self.f2 = f2 = 0
+        self.f1 = f1 = -0.3
         self.alpha_real = alpha_real = 0
         self.alpha_imag = alpha_imag = 0
+        self.a3 = a3 = 1
+        self.a2 = a2 = 1
+        self.a1 = a1 = 1
         self.ScalingForPA = ScalingForPA = 5.485960502027843
         self.LoopDelay = LoopDelay = 51
 
         ##################################################
         # Blocks
         ##################################################
+        self.tab = Qt.QTabWidget()
+        self.tab_widget_0 = Qt.QWidget()
+        self.tab_layout_0 = Qt.QBoxLayout(Qt.QBoxLayout.TopToBottom, self.tab_widget_0)
+        self.tab_grid_layout_0 = Qt.QGridLayout()
+        self.tab_layout_0.addLayout(self.tab_grid_layout_0)
+        self.tab.addTab(self.tab_widget_0, "Main")
+        self.tab_widget_1 = Qt.QWidget()
+        self.tab_layout_1 = Qt.QBoxLayout(Qt.QBoxLayout.TopToBottom, self.tab_widget_1)
+        self.tab_grid_layout_1 = Qt.QGridLayout()
+        self.tab_layout_1.addLayout(self.tab_grid_layout_1)
+        self.tab.addTab(self.tab_widget_1, "Convergence")
+        self.top_layout.addWidget(self.tab)
         self.probe_signal = blocks.probe_signal_c()
+        self._f3_range = Range(-1, 1, 0.001, 0.3, 200)
+        self._f3_win = RangeWidget(self._f3_range, self.set_f3, "f3", "counter_slider", float)
+        self.tab_grid_layout_0.addWidget(self._f3_win,  0, 2, 1, 1)
+        self._f2_range = Range(-1, 1, 0.001, 0, 200)
+        self._f2_win = RangeWidget(self._f2_range, self.set_f2, "f2", "counter_slider", float)
+        self.tab_grid_layout_0.addWidget(self._f2_win,  0, 1, 1, 1)
+        self._f1_range = Range(-1, 1, 0.001, -0.3, 200)
+        self._f1_win = RangeWidget(self._f1_range, self.set_f1, "f1", "counter_slider", float)
+        self.tab_grid_layout_0.addWidget(self._f1_win,  0, 0, 1, 1)
+        self._a3_range = Range(0, 2, 0.01, 1, 200)
+        self._a3_win = RangeWidget(self._a3_range, self.set_a3, "a3", "counter_slider", float)
+        self.tab_grid_layout_0.addWidget(self._a3_win,  1, 2, 1, 1)
+        self._a2_range = Range(0, 2, 0.01, 1, 200)
+        self._a2_win = RangeWidget(self._a2_range, self.set_a2, "a2", "counter_slider", float)
+        self.tab_grid_layout_0.addWidget(self._a2_win,  1, 1, 1, 1)
+        self._a1_range = Range(0, 2, 0.01, 1, 200)
+        self._a1_win = RangeWidget(self._a1_range, self.set_a1, "a1", "counter_slider", float)
+        self.tab_grid_layout_0.addWidget(self._a1_win,  1, 0, 1, 1)
         def _variable_function_probe_0_probe():
             while True:
                 val = self.probe_signal.level()
@@ -136,7 +171,7 @@ class top_block(gr.top_block, Qt.QWidget):
             self.qtgui_time_sink_x_0.set_line_alpha(i, alphas[i])
         
         self._qtgui_time_sink_x_0_win = sip.wrapinstance(self.qtgui_time_sink_x_0.pyqwidget(), Qt.QWidget)
-        self.top_layout.addWidget(self._qtgui_time_sink_x_0_win)
+        self.tab_grid_layout_1.addWidget(self._qtgui_time_sink_x_0_win,  0, 0, 1, 1)
         self.qtgui_freq_sink_x_0 = qtgui.freq_sink_c(
         	1024, #size
         	firdes.WIN_HAMMING, #wintype
@@ -146,7 +181,7 @@ class top_block(gr.top_block, Qt.QWidget):
         	2 #number of inputs
         )
         self.qtgui_freq_sink_x_0.set_update_time(0.10)
-        self.qtgui_freq_sink_x_0.set_y_axis(-100, -20)
+        self.qtgui_freq_sink_x_0.set_y_axis(-100, -15)
         self.qtgui_freq_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, 0.0, 0, "")
         self.qtgui_freq_sink_x_0.enable_autoscale(False)
         self.qtgui_freq_sink_x_0.enable_grid(True)
@@ -177,20 +212,44 @@ class top_block(gr.top_block, Qt.QWidget):
             self.qtgui_freq_sink_x_0.set_line_alpha(i, alphas[i])
         
         self._qtgui_freq_sink_x_0_win = sip.wrapinstance(self.qtgui_freq_sink_x_0.pyqwidget(), Qt.QWidget)
-        self.top_layout.addWidget(self._qtgui_freq_sink_x_0_win)
+        self.tab_grid_layout_0.addWidget(self._qtgui_freq_sink_x_0_win,  2, 0, 1,3)
         self.fir_filter_xxx_1 = filter.fir_filter_ccc(4, (1, ))
         self.fir_filter_xxx_1.declare_sample_delay(0)
         self.fir_filter_xxx_0 = filter.fir_filter_ccc(1, ([-0.00074031,-0.00033842,-0.00030921,-0.00018513,4.4823e-05,0.00037567,0.00078312,0.0012225,0.0016318,0.0019373,0.0020639,0.0019464,0.0015426,0.00084479,-0.00011139,-0.0012438,-0.0024268,-0.0035019,-0.0042951,-0.0046403,-0.0044043,-0.0035124,-0.0019696,0.00012618,0.0025822,0.0051217,0.0074091,0.0090859,0.0098156,0.0093326,0.0074905,0.0042989,-5.3308e-05,-0.0051921,-0.010575,-0.015536,-0.019337,-0.021248,-0.020626,-0.016993,-0.010107,-6.0453e-06,0.012968,0.028176,0.044727,0.061543,0.077452,0.091293,0.10202,0.10882,0.11114,0.10882,0.10202,0.091293,0.077452,0.061543,0.044727,0.028176,0.012968,-6.0453e-06,-0.010107,-0.016993,-0.020626,-0.021248,-0.019337,-0.015536,-0.010575,-0.0051921,-5.3308e-05,0.0042989,0.0074905,0.0093326,0.0098156,0.0090859,0.0074091,0.0051217,0.0025822,0.00012618,-0.0019696,-0.0035124,-0.0044043,-0.0046403,-0.0042951,-0.0035019,-0.0024268,-0.0012438,-0.00011139,0.00084479,0.0015426,0.0019464,0.0020639,0.0019373,0.0016318,0.0012225,0.00078312,0.00037567,4.4823e-05,-0.00018513,-0.00030921,-0.00033842,-0.00074031]))
         self.fir_filter_xxx_0.declare_sample_delay(0)
+        self.channels_channel_model_0_0_0 = channels.channel_model(
+        	noise_voltage=0.0,
+        	frequency_offset=f3,
+        	epsilon=1.0,
+        	taps=(1.0 , ),
+        	noise_seed=0,
+        	block_tags=False
+        )
+        self.channels_channel_model_0_0 = channels.channel_model(
+        	noise_voltage=0.0,
+        	frequency_offset=f2,
+        	epsilon=1.0,
+        	taps=(1.0 , ),
+        	noise_seed=0,
+        	block_tags=False
+        )
+        self.channels_channel_model_0 = channels.channel_model(
+        	noise_voltage=0.0,
+        	frequency_offset=f1,
+        	epsilon=1.0,
+        	taps=(1.0 , ),
+        	noise_seed=0,
+        	block_tags=False
+        )
         self.blocks_throttle_0 = blocks.throttle(gr.sizeof_gr_complex*1, samp_rate,True)
         self.blocks_multiply_xx_4 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_3_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_3 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_2 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_1 = blocks.multiply_vcc(1)
-        self.blocks_multiply_xx_0_0_0 = blocks.multiply_vcc(1)
-        self.blocks_multiply_xx_0_0 = blocks.multiply_vcc(1)
-        self.blocks_multiply_xx_0 = blocks.multiply_vcc(1)
+        self.blocks_multiply_const_vxx_2_1 = blocks.multiply_const_vcc((a2, ))
+        self.blocks_multiply_const_vxx_2_0 = blocks.multiply_const_vcc((a3, ))
+        self.blocks_multiply_const_vxx_2 = blocks.multiply_const_vcc((a1, ))
         self.blocks_multiply_const_vxx_1 = blocks.multiply_const_vcc((mu, ))
         self.blocks_multiply_const_vxx_0_1 = blocks.multiply_const_vcc((ScalingForPA, ))
         self.blocks_multiply_const_vxx_0_0 = blocks.multiply_const_vcc((ScalingForPA, ))
@@ -214,11 +273,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self.analog_const_source_x_0_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, alpha_imag)
         self.analog_const_source_x_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, alpha_real)
         self.Test_W_LMS_0 = Test.W_LMS()
-        self.Test_TotalFreqShift_0_0_1 = Test.TotalFreqShift(f3, systemfs, 1)
         self.Test_TotalFreqShift_0_0_0_0 = Test.TotalFreqShift(-3*(f2-f1), systemfs, 1)
         self.Test_TotalFreqShift_0_0_0 = Test.TotalFreqShift(9000000*2, systemfs, -1)
-        self.Test_TotalFreqShift_0_0 = Test.TotalFreqShift(f2, systemfs, 1)
-        self.Test_TotalFreqShift_0 = Test.TotalFreqShift(f1, systemfs, 1)
         self.Test_MemorylessPA_0_0 = Test.MemorylessPA()
         self.Test_MemorylessPA_0 = Test.MemorylessPA()
         self.Test_MeanCorrelation_0 = Test.MeanCorrelation()
@@ -230,11 +286,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.Test_MemorylessPA_0, 0), (self.blocks_multiply_xx_3, 0))    
         self.connect((self.Test_MemorylessPA_0, 0), (self.qtgui_freq_sink_x_0, 1))    
         self.connect((self.Test_MemorylessPA_0_0, 0), (self.qtgui_freq_sink_x_0, 0))    
-        self.connect((self.Test_TotalFreqShift_0, 0), (self.blocks_multiply_xx_0, 0))    
-        self.connect((self.Test_TotalFreqShift_0_0, 0), (self.blocks_multiply_xx_0_0, 0))    
         self.connect((self.Test_TotalFreqShift_0_0_0, 0), (self.blocks_multiply_xx_3, 1))    
         self.connect((self.Test_TotalFreqShift_0_0_0_0, 0), (self.blocks_multiply_xx_3_0, 1))    
-        self.connect((self.Test_TotalFreqShift_0_0_1, 0), (self.blocks_multiply_xx_0_0_0, 0))    
         self.connect((self.Test_W_LMS_0, 0), (self.blocks_conjugate_cc_2, 0))    
         self.connect((self.Test_W_LMS_0, 0), (self.qtgui_time_sink_x_0, 0))    
         self.connect((self.analog_const_source_x_0, 0), (self.blocks_float_to_complex_1, 0))    
@@ -252,19 +305,19 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_file_source_0_1, 0), (self.blocks_float_to_complex_0_0, 0))    
         self.connect((self.blocks_file_source_0_1_0, 0), (self.blocks_float_to_complex_0_0_0, 0))    
         self.connect((self.blocks_float_to_complex_0, 0), (self.blocks_multiply_const_vxx_0_0, 0))    
-        self.connect((self.blocks_float_to_complex_0, 0), (self.blocks_multiply_xx_0, 1))    
+        self.connect((self.blocks_float_to_complex_0, 0), (self.channels_channel_model_0, 0))    
         self.connect((self.blocks_float_to_complex_0_0, 0), (self.blocks_multiply_const_vxx_0_1, 0))    
-        self.connect((self.blocks_float_to_complex_0_0, 0), (self.blocks_multiply_xx_0_0, 1))    
-        self.connect((self.blocks_float_to_complex_0_0_0, 0), (self.blocks_multiply_xx_0_0_0, 1))    
+        self.connect((self.blocks_float_to_complex_0_0, 0), (self.channels_channel_model_0_0, 0))    
+        self.connect((self.blocks_float_to_complex_0_0_0, 0), (self.channels_channel_model_0_0_0, 0))    
         self.connect((self.blocks_float_to_complex_1, 0), (self.blocks_multiply_xx_4, 0))    
         self.connect((self.blocks_multiply_const_vxx_0, 0), (self.blocks_throttle_0, 0))    
         self.connect((self.blocks_multiply_const_vxx_0_0, 0), (self.blocks_multiply_xx_1, 0))    
         self.connect((self.blocks_multiply_const_vxx_0_0, 0), (self.blocks_multiply_xx_1, 1))    
         self.connect((self.blocks_multiply_const_vxx_0_1, 0), (self.blocks_conjugate_cc_0, 0))    
         self.connect((self.blocks_multiply_const_vxx_1, 0), (self.Test_W_LMS_0, 0))    
-        self.connect((self.blocks_multiply_xx_0, 0), (self.blocks_add_xx_0, 0))    
-        self.connect((self.blocks_multiply_xx_0_0, 0), (self.blocks_add_xx_0, 1))    
-        self.connect((self.blocks_multiply_xx_0_0_0, 0), (self.blocks_add_xx_0, 2))    
+        self.connect((self.blocks_multiply_const_vxx_2, 0), (self.blocks_add_xx_0, 0))    
+        self.connect((self.blocks_multiply_const_vxx_2_0, 0), (self.blocks_add_xx_0, 2))    
+        self.connect((self.blocks_multiply_const_vxx_2_1, 0), (self.blocks_add_xx_0, 1))    
         self.connect((self.blocks_multiply_xx_1, 0), (self.blocks_multiply_xx_2, 0))    
         self.connect((self.blocks_multiply_xx_2, 0), (self.blocks_delay_0, 0))    
         self.connect((self.blocks_multiply_xx_2, 0), (self.blocks_multiply_xx_4, 1))    
@@ -273,6 +326,9 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_multiply_xx_4, 0), (self.blocks_multiply_xx_3_0, 0))    
         self.connect((self.blocks_throttle_0, 0), (self.Test_MemorylessPA_0_0, 0))    
         self.connect((self.blocks_throttle_0, 0), (self.blocks_add_xx_0_0, 0))    
+        self.connect((self.channels_channel_model_0, 0), (self.blocks_multiply_const_vxx_2, 0))    
+        self.connect((self.channels_channel_model_0_0, 0), (self.blocks_multiply_const_vxx_2_1, 0))    
+        self.connect((self.channels_channel_model_0_0_0, 0), (self.blocks_multiply_const_vxx_2_0, 0))    
         self.connect((self.fir_filter_xxx_0, 0), (self.blocks_conjugate_cc_1, 0))    
         self.connect((self.fir_filter_xxx_1, 0), (self.blocks_multiply_const_vxx_1, 0))    
 
@@ -315,18 +371,21 @@ class top_block(gr.top_block, Qt.QWidget):
 
     def set_f3(self, f3):
         self.f3 = f3
+        self.channels_channel_model_0_0_0.set_frequency_offset(self.f3)
 
     def get_f2(self):
         return self.f2
 
     def set_f2(self, f2):
         self.f2 = f2
+        self.channels_channel_model_0_0.set_frequency_offset(self.f2)
 
     def get_f1(self):
         return self.f1
 
     def set_f1(self, f1):
         self.f1 = f1
+        self.channels_channel_model_0.set_frequency_offset(self.f1)
 
     def get_alpha_real(self):
         return self.alpha_real
@@ -341,6 +400,27 @@ class top_block(gr.top_block, Qt.QWidget):
     def set_alpha_imag(self, alpha_imag):
         self.alpha_imag = alpha_imag
         self.analog_const_source_x_0_0.set_offset(self.alpha_imag)
+
+    def get_a3(self):
+        return self.a3
+
+    def set_a3(self, a3):
+        self.a3 = a3
+        self.blocks_multiply_const_vxx_2_0.set_k((self.a3, ))
+
+    def get_a2(self):
+        return self.a2
+
+    def set_a2(self, a2):
+        self.a2 = a2
+        self.blocks_multiply_const_vxx_2_1.set_k((self.a2, ))
+
+    def get_a1(self):
+        return self.a1
+
+    def set_a1(self, a1):
+        self.a1 = a1
+        self.blocks_multiply_const_vxx_2.set_k((self.a1, ))
 
     def get_ScalingForPA(self):
         return self.ScalingForPA
