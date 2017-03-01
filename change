@@ -1,0 +1,14 @@
+        def _variable_function_probe_0_probe():
+            while True:
+                val = self.probe_signal.level()
+                self.set_alpha_real(val.real)
+                self.set_alpha_imag(val.imag)
+                try:
+                    self.set_variable_function_probe_0(val)
+                except AttributeError:
+                    pass
+                time.sleep(1.0 / (38400000/10))
+        _variable_function_probe_0_thread = threading.Thread(target=_variable_function_probe_0_probe)
+        _variable_function_probe_0_thread.daemon = True
+        _variable_function_probe_0_thread.start()
+
