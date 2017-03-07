@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<block>
+  <name>ConfigurablePA</name>
+  <key>Test_ConfigurablePA</key>
+  <category>Test</category>
+  <import>import Test</import>
+  <make>Test.ConfigurablePA($beta1, $beta3, $beta5, $beta7, $beta9)</make>
+  <callback> set_beta1($beta1)</callback>
+  <callback> set_beta3($beta3)</callback>
+  <callback> set_beta5($beta5)</callback>
+  <callback> set_beta7($beta7)</callback>
+  <callback> set_beta9($beta9)</callback>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>beta1</name>
+    <key>beta1</key>
+    <type>complex</type>
+  </param>
+  <param>
+    <name>beta3</name>
+    <key>beta3</key>
+    <type>complex</type>
+  </param>
+  <param>
+    <name>beta5</name>
+    <key>beta5</key>
+    <type>complex</type>
+  </param>
+  <param>
+    <name>beta7</name>
+    <key>beta7</key>
+    <type>complex</type>
+  </param>
+  <param>
+    <name>beta9</name>
+    <key>beta9</key>
+    <type>complex</type>
+  </param>
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>
