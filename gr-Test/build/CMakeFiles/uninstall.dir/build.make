@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chance/DPD/gr-Test
+CMAKE_SOURCE_DIR = /home/chance/Documents/Git/GNURadioDPD/gr-Test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chance/DPD/gr-Test/build
+CMAKE_BINARY_DIR = /home/chance/Documents/Git/GNURadioDPD/gr-Test/build
 
 # Utility rule file for uninstall.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/chance/DPD/gr-Test/build
 include CMakeFiles/uninstall.dir/progress.make
 
 CMakeFiles/uninstall:
-	/usr/bin/cmake -P /home/chance/DPD/gr-Test/build/cmake_uninstall.cmake
+	/usr/bin/cmake -P /home/chance/Documents/Git/GNURadioDPD/gr-Test/build/cmake_uninstall.cmake
 
 uninstall: CMakeFiles/uninstall
 uninstall: CMakeFiles/uninstall.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/chance/DPD/gr-Test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chance/DPD/gr-Test /home/chance/DPD/gr-Test /home/chance/DPD/gr-Test/build /home/chance/DPD/gr-Test/build /home/chance/DPD/gr-Test/build/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/chance/Documents/Git/GNURadioDPD/gr-Test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chance/Documents/Git/GNURadioDPD/gr-Test /home/chance/Documents/Git/GNURadioDPD/gr-Test /home/chance/Documents/Git/GNURadioDPD/gr-Test/build /home/chance/Documents/Git/GNURadioDPD/gr-Test/build /home/chance/Documents/Git/GNURadioDPD/gr-Test/build/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

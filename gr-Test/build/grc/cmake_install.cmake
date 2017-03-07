@@ -1,4 +1,4 @@
-# Install script for directory: /home/chance/DPD/gr-Test/grc
+# Install script for directory: /home/chance/Documents/Git/GNURadioDPD/gr-Test/grc
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,16 +34,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gnuradio/grc/blocks" TYPE FILE FILES
-    "/home/chance/DPD/gr-Test/grc/Test_test.xml"
-    "/home/chance/DPD/gr-Test/grc/Test_FreqShift.xml"
-    "/home/chance/DPD/gr-Test/grc/Test_Freq2.xml"
-    "/home/chance/DPD/gr-Test/grc/Test_SimpleFreqShift.xml"
-    "/home/chance/DPD/gr-Test/grc/Test_BiSimpleShift.xml"
-    "/home/chance/DPD/gr-Test/grc/Test_TotalFreqShift.xml"
-    "/home/chance/DPD/gr-Test/grc/Test_MemorylessPA.xml"
-    "/home/chance/DPD/gr-Test/grc/Test_MeanCorrelation.xml"
-    "/home/chance/DPD/gr-Test/grc/Test_W_LMS.xml"
-    "/home/chance/DPD/gr-Test/grc/Test_alpha.xml"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/grc/Test_test.xml"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/grc/Test_FreqShift.xml"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/grc/Test_Freq2.xml"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/grc/Test_SimpleFreqShift.xml"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/grc/Test_BiSimpleShift.xml"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/grc/Test_TotalFreqShift.xml"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/grc/Test_MemorylessPA.xml"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/grc/Test_MeanCorrelation.xml"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/grc/Test_W_LMS.xml"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/grc/Test_alpha.xml"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/grc/Test_ConfigurablePA.xml"
     )
 endif()
 

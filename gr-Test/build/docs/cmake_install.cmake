@@ -1,4 +1,4 @@
-# Install script for directory: /home/chance/DPD/gr-Test/docs
+# Install script for directory: /home/chance/Documents/Git/GNURadioDPD/gr-Test/docs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/chance/DPD/gr-Test/build/docs/doxygen/cmake_install.cmake")
+  include("/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/docs/doxygen/cmake_install.cmake")
 
 endif()
 

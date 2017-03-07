@@ -1,4 +1,4 @@
-# Install script for directory: /home/chance/DPD/gr-Test/python
+# Install script for directory: /home/chance/Documents/Git/GNURadioDPD/gr-Test/python
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,44 +34,47 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/Test" TYPE FILE FILES
-    "/home/chance/DPD/gr-Test/python/__init__.py"
-    "/home/chance/DPD/gr-Test/python/test.py"
-    "/home/chance/DPD/gr-Test/python/FreqShift.py"
-    "/home/chance/DPD/gr-Test/python/Freq2.py"
-    "/home/chance/DPD/gr-Test/python/SimpleFreqShift.py"
-    "/home/chance/DPD/gr-Test/python/BiSimpleShift.py"
-    "/home/chance/DPD/gr-Test/python/TotalFreqShift.py"
-    "/home/chance/DPD/gr-Test/python/MemorylessPA.py"
-    "/home/chance/DPD/gr-Test/python/MeanCorrelation.py"
-    "/home/chance/DPD/gr-Test/python/W_LMS.py"
-    "/home/chance/DPD/gr-Test/python/alpha.py"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/python/__init__.py"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/python/test.py"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/python/FreqShift.py"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/python/Freq2.py"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/python/SimpleFreqShift.py"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/python/BiSimpleShift.py"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/python/TotalFreqShift.py"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/python/MemorylessPA.py"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/python/MeanCorrelation.py"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/python/W_LMS.py"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/python/alpha.py"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/python/ConfigurablePA.py"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/Test" TYPE FILE FILES
-    "/home/chance/DPD/gr-Test/build/python/__init__.pyc"
-    "/home/chance/DPD/gr-Test/build/python/test.pyc"
-    "/home/chance/DPD/gr-Test/build/python/FreqShift.pyc"
-    "/home/chance/DPD/gr-Test/build/python/Freq2.pyc"
-    "/home/chance/DPD/gr-Test/build/python/SimpleFreqShift.pyc"
-    "/home/chance/DPD/gr-Test/build/python/BiSimpleShift.pyc"
-    "/home/chance/DPD/gr-Test/build/python/TotalFreqShift.pyc"
-    "/home/chance/DPD/gr-Test/build/python/MemorylessPA.pyc"
-    "/home/chance/DPD/gr-Test/build/python/MeanCorrelation.pyc"
-    "/home/chance/DPD/gr-Test/build/python/W_LMS.pyc"
-    "/home/chance/DPD/gr-Test/build/python/alpha.pyc"
-    "/home/chance/DPD/gr-Test/build/python/__init__.pyo"
-    "/home/chance/DPD/gr-Test/build/python/test.pyo"
-    "/home/chance/DPD/gr-Test/build/python/FreqShift.pyo"
-    "/home/chance/DPD/gr-Test/build/python/Freq2.pyo"
-    "/home/chance/DPD/gr-Test/build/python/SimpleFreqShift.pyo"
-    "/home/chance/DPD/gr-Test/build/python/BiSimpleShift.pyo"
-    "/home/chance/DPD/gr-Test/build/python/TotalFreqShift.pyo"
-    "/home/chance/DPD/gr-Test/build/python/MemorylessPA.pyo"
-    "/home/chance/DPD/gr-Test/build/python/MeanCorrelation.pyo"
-    "/home/chance/DPD/gr-Test/build/python/W_LMS.pyo"
-    "/home/chance/DPD/gr-Test/build/python/alpha.pyo"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/__init__.pyc"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/test.pyc"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/FreqShift.pyc"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/Freq2.pyc"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/SimpleFreqShift.pyc"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/BiSimpleShift.pyc"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/TotalFreqShift.pyc"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/MemorylessPA.pyc"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/MeanCorrelation.pyc"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/W_LMS.pyc"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/alpha.pyc"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/ConfigurablePA.pyc"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/__init__.pyo"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/test.pyo"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/FreqShift.pyo"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/Freq2.pyo"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/SimpleFreqShift.pyo"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/BiSimpleShift.pyo"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/TotalFreqShift.pyo"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/MemorylessPA.pyo"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/MeanCorrelation.pyo"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/W_LMS.pyo"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/alpha.pyo"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/ConfigurablePA.pyo"
     )
 endif()
 

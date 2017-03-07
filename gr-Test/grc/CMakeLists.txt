@@ -26,5 +26,6 @@ install(FILES
     Test_MemorylessPA.xml
     Test_MeanCorrelation.xml
     Test_W_LMS.xml
-    Test_alpha.xml DESTINATION share/gnuradio/grc/blocks
+    Test_alpha.xml
+    Test_ConfigurablePA.xml DESTINATION share/gnuradio/grc/blocks
 )

@@ -1,4 +1,4 @@
-# Install script for directory: /home/chance/DPD/gr-Test/include/Test
+# Install script for directory: /home/chance/Documents/Git/GNURadioDPD/gr-Test/include/Test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,6 +33,6 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/Test" TYPE FILE FILES "/home/chance/DPD/gr-Test/include/Test/api.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/Test" TYPE FILE FILES "/home/chance/Documents/Git/GNURadioDPD/gr-Test/include/Test/api.h")
 endif()
 

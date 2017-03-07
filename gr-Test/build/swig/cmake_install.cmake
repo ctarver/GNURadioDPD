@@ -1,4 +1,4 @@
-# Install script for directory: /home/chance/DPD/gr-Test/swig
+# Install script for directory: /home/chance/Documents/Git/GNURadioDPD/gr-Test/swig
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

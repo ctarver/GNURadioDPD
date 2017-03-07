@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chance/DPD/gr-Test
+CMAKE_SOURCE_DIR = /home/chance/Documents/Git/GNURadioDPD/gr-Test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chance/DPD/gr-Test/build
+CMAKE_BINARY_DIR = /home/chance/Documents/Git/GNURadioDPD/gr-Test/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -135,14 +135,14 @@ install/local/fast: install/local
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/chance/DPD/gr-Test/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/chance/DPD/gr-Test/build/CMakeFiles /home/chance/DPD/gr-Test/build/docs/doxygen/CMakeFiles/progress.marks
-	cd /home/chance/DPD/gr-Test/build && $(MAKE) -f CMakeFiles/Makefile2 docs/doxygen/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/chance/DPD/gr-Test/build/CMakeFiles 0
+	cd /home/chance/Documents/Git/GNURadioDPD/gr-Test/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/chance/Documents/Git/GNURadioDPD/gr-Test/build/CMakeFiles /home/chance/Documents/Git/GNURadioDPD/gr-Test/build/docs/doxygen/CMakeFiles/progress.marks
+	cd /home/chance/Documents/Git/GNURadioDPD/gr-Test/build && $(MAKE) -f CMakeFiles/Makefile2 docs/doxygen/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chance/Documents/Git/GNURadioDPD/gr-Test/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/chance/DPD/gr-Test/build && $(MAKE) -f CMakeFiles/Makefile2 docs/doxygen/clean
+	cd /home/chance/Documents/Git/GNURadioDPD/gr-Test/build && $(MAKE) -f CMakeFiles/Makefile2 docs/doxygen/clean
 .PHONY : clean
 
 # The main clean target
@@ -152,22 +152,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/chance/DPD/gr-Test/build && $(MAKE) -f CMakeFiles/Makefile2 docs/doxygen/preinstall
+	cd /home/chance/Documents/Git/GNURadioDPD/gr-Test/build && $(MAKE) -f CMakeFiles/Makefile2 docs/doxygen/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/chance/DPD/gr-Test/build && $(MAKE) -f CMakeFiles/Makefile2 docs/doxygen/preinstall
+	cd /home/chance/Documents/Git/GNURadioDPD/gr-Test/build && $(MAKE) -f CMakeFiles/Makefile2 docs/doxygen/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/chance/DPD/gr-Test/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/chance/Documents/Git/GNURadioDPD/gr-Test/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 docs/doxygen/CMakeFiles/doxygen_target.dir/rule:
-	cd /home/chance/DPD/gr-Test/build && $(MAKE) -f CMakeFiles/Makefile2 docs/doxygen/CMakeFiles/doxygen_target.dir/rule
+	cd /home/chance/Documents/Git/GNURadioDPD/gr-Test/build && $(MAKE) -f CMakeFiles/Makefile2 docs/doxygen/CMakeFiles/doxygen_target.dir/rule
 .PHONY : docs/doxygen/CMakeFiles/doxygen_target.dir/rule
 
 # Convenience name for target.
@@ -177,7 +177,7 @@ doxygen_target: docs/doxygen/CMakeFiles/doxygen_target.dir/rule
 
 # fast build rule for target.
 doxygen_target/fast:
-	cd /home/chance/DPD/gr-Test/build && $(MAKE) -f docs/doxygen/CMakeFiles/doxygen_target.dir/build.make docs/doxygen/CMakeFiles/doxygen_target.dir/build
+	cd /home/chance/Documents/Git/GNURadioDPD/gr-Test/build && $(MAKE) -f docs/doxygen/CMakeFiles/doxygen_target.dir/build.make docs/doxygen/CMakeFiles/doxygen_target.dir/build
 .PHONY : doxygen_target/fast
 
 # Help Target
@@ -205,6 +205,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/chance/DPD/gr-Test/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/chance/Documents/Git/GNURadioDPD/gr-Test/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

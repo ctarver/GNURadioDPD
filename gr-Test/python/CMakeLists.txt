@@ -40,7 +40,8 @@ GR_PYTHON_INSTALL(
     MemorylessPA.py
     MeanCorrelation.py
     W_LMS.py
-    alpha.py DESTINATION ${GR_PYTHON_DIR}/Test
+    alpha.py
+    ConfigurablePA.py DESTINATION ${GR_PYTHON_DIR}/Test
 )
 
 ########################################################################

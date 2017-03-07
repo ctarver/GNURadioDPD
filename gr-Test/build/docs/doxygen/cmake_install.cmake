@@ -1,4 +1,4 @@
-# Install script for directory: /home/chance/DPD/gr-Test/docs/doxygen
+# Install script for directory: /home/chance/Documents/Git/GNURadioDPD/gr-Test/docs/doxygen
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/doc/gr-Test" TYPE DIRECTORY FILES
-    "/home/chance/DPD/gr-Test/build/docs/doxygen/xml"
-    "/home/chance/DPD/gr-Test/build/docs/doxygen/html"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/docs/doxygen/xml"
+    "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/docs/doxygen/html"
     )
 endif()
 

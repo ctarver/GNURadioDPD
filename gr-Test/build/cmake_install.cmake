@@ -1,4 +1,4 @@
-# Install script for directory: /home/chance/DPD/gr-Test
+# Install script for directory: /home/chance/Documents/Git/GNURadioDPD/gr-Test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,18 +33,18 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/Test" TYPE FILE FILES "/home/chance/DPD/gr-Test/cmake/Modules/TestConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/Test" TYPE FILE FILES "/home/chance/Documents/Git/GNURadioDPD/gr-Test/cmake/Modules/TestConfig.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/chance/DPD/gr-Test/build/include/Test/cmake_install.cmake")
-  include("/home/chance/DPD/gr-Test/build/lib/cmake_install.cmake")
-  include("/home/chance/DPD/gr-Test/build/swig/cmake_install.cmake")
-  include("/home/chance/DPD/gr-Test/build/python/cmake_install.cmake")
-  include("/home/chance/DPD/gr-Test/build/grc/cmake_install.cmake")
-  include("/home/chance/DPD/gr-Test/build/apps/cmake_install.cmake")
-  include("/home/chance/DPD/gr-Test/build/docs/cmake_install.cmake")
+  include("/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/include/Test/cmake_install.cmake")
+  include("/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/lib/cmake_install.cmake")
+  include("/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/swig/cmake_install.cmake")
+  include("/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/python/cmake_install.cmake")
+  include("/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/grc/cmake_install.cmake")
+  include("/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/apps/cmake_install.cmake")
+  include("/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/docs/cmake_install.cmake")
 
 endif()
 
@@ -56,5 +56,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/chance/DPD/gr-Test/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/chance/Documents/Git/GNURadioDPD/gr-Test/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

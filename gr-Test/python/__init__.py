@@ -41,6 +41,7 @@ from MemorylessPA import MemorylessPA
 from MeanCorrelation import MeanCorrelation
 from W_LMS import W_LMS
 from alpha import alpha
+from ConfigurablePA import ConfigurablePA
 
 
 

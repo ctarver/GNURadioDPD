@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chance/DPD/gr-Test
+CMAKE_SOURCE_DIR = /home/chance/Documents/Git/GNURadioDPD/gr-Test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chance/DPD/gr-Test/build
+CMAKE_BINARY_DIR = /home/chance/Documents/Git/GNURadioDPD/gr-Test/build
 
 # Utility rule file for pygen_apps_9a6dd.
 
@@ -63,10 +63,10 @@ apps/CMakeFiles/pygen_apps_9a6dd.dir/build: pygen_apps_9a6dd
 .PHONY : apps/CMakeFiles/pygen_apps_9a6dd.dir/build
 
 apps/CMakeFiles/pygen_apps_9a6dd.dir/clean:
-	cd /home/chance/DPD/gr-Test/build/apps && $(CMAKE_COMMAND) -P CMakeFiles/pygen_apps_9a6dd.dir/cmake_clean.cmake
+	cd /home/chance/Documents/Git/GNURadioDPD/gr-Test/build/apps && $(CMAKE_COMMAND) -P CMakeFiles/pygen_apps_9a6dd.dir/cmake_clean.cmake
 .PHONY : apps/CMakeFiles/pygen_apps_9a6dd.dir/clean
 
 apps/CMakeFiles/pygen_apps_9a6dd.dir/depend:
-	cd /home/chance/DPD/gr-Test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chance/DPD/gr-Test /home/chance/DPD/gr-Test/apps /home/chance/DPD/gr-Test/build /home/chance/DPD/gr-Test/build/apps /home/chance/DPD/gr-Test/build/apps/CMakeFiles/pygen_apps_9a6dd.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/chance/Documents/Git/GNURadioDPD/gr-Test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chance/Documents/Git/GNURadioDPD/gr-Test /home/chance/Documents/Git/GNURadioDPD/gr-Test/apps /home/chance/Documents/Git/GNURadioDPD/gr-Test/build /home/chance/Documents/Git/GNURadioDPD/gr-Test/build/apps /home/chance/Documents/Git/GNURadioDPD/gr-Test/build/apps/CMakeFiles/pygen_apps_9a6dd.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : apps/CMakeFiles/pygen_apps_9a6dd.dir/depend
 

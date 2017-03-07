@@ -1,4 +1,4 @@
-# Install script for directory: /home/chance/DPD/gr-Test/lib
+# Install script for directory: /home/chance/Documents/Git/GNURadioDPD/gr-Test/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

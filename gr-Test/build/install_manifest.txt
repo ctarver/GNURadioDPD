@@ -11,6 +11,7 @@
 /usr/local/lib/python2.7/dist-packages/Test/MeanCorrelation.py
 /usr/local/lib/python2.7/dist-packages/Test/W_LMS.py
 /usr/local/lib/python2.7/dist-packages/Test/alpha.py
+/usr/local/lib/python2.7/dist-packages/Test/ConfigurablePA.py
 /usr/local/lib/python2.7/dist-packages/Test/__init__.pyc
 /usr/local/lib/python2.7/dist-packages/Test/test.pyc
 /usr/local/lib/python2.7/dist-packages/Test/FreqShift.pyc
@@ -22,6 +23,7 @@
 /usr/local/lib/python2.7/dist-packages/Test/MeanCorrelation.pyc
 /usr/local/lib/python2.7/dist-packages/Test/W_LMS.pyc
 /usr/local/lib/python2.7/dist-packages/Test/alpha.pyc
+/usr/local/lib/python2.7/dist-packages/Test/ConfigurablePA.pyc
 /usr/local/lib/python2.7/dist-packages/Test/__init__.pyo
 /usr/local/lib/python2.7/dist-packages/Test/test.pyo
 /usr/local/lib/python2.7/dist-packages/Test/FreqShift.pyo
@@ -33,6 +35,7 @@
 /usr/local/lib/python2.7/dist-packages/Test/MeanCorrelation.pyo
 /usr/local/lib/python2.7/dist-packages/Test/W_LMS.pyo
 /usr/local/lib/python2.7/dist-packages/Test/alpha.pyo
+/usr/local/lib/python2.7/dist-packages/Test/ConfigurablePA.pyo
 /usr/local/share/gnuradio/grc/blocks/Test_test.xml
 /usr/local/share/gnuradio/grc/blocks/Test_FreqShift.xml
 /usr/local/share/gnuradio/grc/blocks/Test_Freq2.xml
@@ -43,6 +46,7 @@
 /usr/local/share/gnuradio/grc/blocks/Test_MeanCorrelation.xml
 /usr/local/share/gnuradio/grc/blocks/Test_W_LMS.xml
 /usr/local/share/gnuradio/grc/blocks/Test_alpha.xml
+/usr/local/share/gnuradio/grc/blocks/Test_ConfigurablePA.xml
 /usr/local/share/doc/gr-Test/xml/group__block.xml
 /usr/local/share/doc/gr-Test/xml/compound.xsd
 /usr/local/share/doc/gr-Test/xml/index.xml
