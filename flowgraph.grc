@@ -386,6 +386,510 @@
     </param>
     <param>
       <key>value</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(776, 169)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>tab@1: 1, 0, 1, 1</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>beta1_imag</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>beta1_imag</value>
+    </param>
+    <param>
+      <key>min_len</key>
+      <value>200</value>
+    </param>
+    <param>
+      <key>orient</key>
+      <value>Qt.Horizontal</value>
+    </param>
+    <param>
+      <key>start</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>0.01</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_range</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(776, 73)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>tab@1: 0, 0, 1, 1</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>beta1_real</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>beta1_real</value>
+    </param>
+    <param>
+      <key>min_len</key>
+      <value>200</value>
+    </param>
+    <param>
+      <key>orient</key>
+      <value>Qt.Horizontal</value>
+    </param>
+    <param>
+      <key>start</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>0.01</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_range</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0.01</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(888, 169)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>tab@1: 1, 1, 1, 1</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>beta3_imag</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>beta3_imag</value>
+    </param>
+    <param>
+      <key>min_len</key>
+      <value>200</value>
+    </param>
+    <param>
+      <key>orient</key>
+      <value>Qt.Horizontal</value>
+    </param>
+    <param>
+      <key>start</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>0.001</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_range</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0.02</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(888, 73)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>tab@1: 0, 1, 1, 1</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>beta3_real</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>beta3_real</value>
+    </param>
+    <param>
+      <key>min_len</key>
+      <value>200</value>
+    </param>
+    <param>
+      <key>orient</key>
+      <value>Qt.Horizontal</value>
+    </param>
+    <param>
+      <key>start</key>
+      <value>-0.5</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>0.001</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>0.5</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_range</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1000, 169)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>tab@1: 1, 2, 1, 1</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>beta5_imag</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>beta5_imag</value>
+    </param>
+    <param>
+      <key>min_len</key>
+      <value>200</value>
+    </param>
+    <param>
+      <key>orient</key>
+      <value>Qt.Horizontal</value>
+    </param>
+    <param>
+      <key>start</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>0.0001</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_range</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1000, 73)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>tab@1: 0, 2, 1, 1</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>beta5_real</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>beta5_real</value>
+    </param>
+    <param>
+      <key>min_len</key>
+      <value>200</value>
+    </param>
+    <param>
+      <key>orient</key>
+      <value>Qt.Horizontal</value>
+    </param>
+    <param>
+      <key>start</key>
+      <value>-0.1</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>0.0001</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>0.1</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_range</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1104, 169)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>tab@1: 1, 3, 1, 1</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>beta7_imag</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>beta7_imag</value>
+    </param>
+    <param>
+      <key>min_len</key>
+      <value>200</value>
+    </param>
+    <param>
+      <key>orient</key>
+      <value>Qt.Horizontal</value>
+    </param>
+    <param>
+      <key>start</key>
+      <value>-0.1</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>0.0001</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>0.1</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_range</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1104, 73)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>tab@1: 0, 3, 1, 1</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>beta7_real</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>beta7_real</value>
+    </param>
+    <param>
+      <key>min_len</key>
+      <value>200</value>
+    </param>
+    <param>
+      <key>orient</key>
+      <value>Qt.Horizontal</value>
+    </param>
+    <param>
+      <key>start</key>
+      <value>-0.1</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>0.0001</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>0.1</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_range</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
       <value>-0.1</value>
     </param>
     <param>
@@ -711,7 +1215,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1032, 855)</value>
+      <value>(1048, 855)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -731,19 +1235,19 @@
     </param>
     <param>
       <key>beta1</key>
-      <value>1.0</value>
+      <value>complex(beta1_real,beta1_imag)</value>
     </param>
     <param>
       <key>beta3</key>
-      <value>0</value>
+      <value>complex(beta3_real,beta3_imag)</value>
     </param>
     <param>
       <key>beta5</key>
-      <value>0</value>
+      <value>complex(beta5_real,beta5_imag)</value>
     </param>
     <param>
       <key>beta7</key>
-      <value>0</value>
+      <value>complex(beta7_real,beta7_imag)</value>
     </param>
     <param>
       <key>beta9</key>
@@ -813,7 +1317,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1168, 91)</value>
+      <value>(1264, 91)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1377,7 +1881,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1312, 979)</value>
+      <value>(1416, 619)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1585,7 +2089,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/chance/DPD/CC2_imag_new.bin</value>
+      <value>/home/chance/DPD/CC1_imag_new.bin</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1597,7 +2101,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>blocks_file_source_0_0_0_0</value>
+      <value>blocks_file_source_0_0_1</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -2915,7 +3419,7 @@
     </param>
     <param>
       <key>bw</key>
-      <value>samp_rate</value>
+      <value>samp_rate*4</value>
     </param>
     <param>
       <key>alias</key>
@@ -2947,11 +3451,11 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1248, 829)</value>
+      <value>(1408, 741)</value>
     </param>
     <param>
       <key>gui_hint</key>
-      <value>tab@0: 2, 0, 1,3</value>
+      <value>0,0,1,4</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2979,7 +3483,7 @@
     </param>
     <param>
       <key>label1</key>
-      <value></value>
+      <value>Original</value>
     </param>
     <param>
       <key>width1</key>
@@ -3011,7 +3515,7 @@
     </param>
     <param>
       <key>label2</key>
-      <value></value>
+      <value>PostPA</value>
     </param>
     <param>
       <key>width2</key>
@@ -3218,7 +3722,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3569,7 +4073,7 @@
     </param>
     <param>
       <key>gui_hint</key>
-      <value></value>
+      <value>1, 0, 3,4</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3581,11 +4085,11 @@
     </param>
     <param>
       <key>label0</key>
-      <value>Main</value>
+      <value>Carrier Positions and Amplitudes</value>
     </param>
     <param>
       <key>label1</key>
-      <value>Convergence</value>
+      <value>PA Paramters</value>
     </param>
     <param>
       <key>label10</key>
@@ -3757,7 +4261,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1232, 911)</value>
+      <value>(1416, 879)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3968,6 +4472,12 @@
     <sink_key>1</sink_key>
   </connection>
   <connection>
+    <source_block_id>Test_ConfigurablePA_0</source_block_id>
+    <sink_block_id>virtual_sink_1</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>Test_MeanCorrelation_0</source_block_id>
     <sink_block_id>fir_filter_xxx_1</sink_block_id>
     <source_key>0</source_key>
@@ -4022,6 +4532,12 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
+    <source_block_id>blocks_add_xx_0_0</source_block_id>
+    <sink_block_id>qtgui_freq_sink_x_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
     <source_block_id>blocks_conjugate_cc_0</source_block_id>
     <sink_block_id>blocks_multiply_xx_2</sink_block_id>
     <source_key>0</source_key>
@@ -4064,7 +4580,7 @@
     <sink_key>1</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_file_source_0_0_0_0</source_block_id>
+    <source_block_id>blocks_file_source_0_0_1</source_block_id>
     <sink_block_id>blocks_float_to_complex_0_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>1</sink_key>
@@ -4270,12 +4786,6 @@
   <connection>
     <source_block_id>virtual_source_3</source_block_id>
     <sink_block_id>blocks_add_xx_0_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>virtual_source_3</source_block_id>
-    <sink_block_id>qtgui_freq_sink_x_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
