@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Tue Mar  7 15:19:47 2017
+# Generated: Tue Mar  7 15:37:31 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -159,7 +159,7 @@ class top_block(gr.top_block, Qt.QWidget):
         	1024, #size
         	firdes.WIN_HAMMING, #wintype
         	0, #fc
-        	samp_rate*4, #bw
+        	samp_rate, #bw
         	"IM3+ DPD Spectrum", #name
         	2 #number of inputs
         )
@@ -241,9 +241,9 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_float_to_complex_0_0_0 = blocks.float_to_complex(1)
         self.blocks_float_to_complex_0_0 = blocks.float_to_complex(1)
         self.blocks_float_to_complex_0 = blocks.float_to_complex(1)
-        self.blocks_file_source_0_1_0 = blocks.file_source(gr.sizeof_float*1, "/home/chance/DPD/CC2_real_new.bin", True)
+        self.blocks_file_source_0_1_0 = blocks.file_source(gr.sizeof_float*1, "/home/chance/Documents/Git/GNURadioDPD/InputData/CC3_real.bin", True)
         self.blocks_file_source_0_1 = blocks.file_source(gr.sizeof_float*1, "/home/chance/DPD/CC2_real_new.bin", True)
-        self.blocks_file_source_0_0_1 = blocks.file_source(gr.sizeof_float*1, "/home/chance/DPD/CC1_imag_new.bin", True)
+        self.blocks_file_source_0_0_1 = blocks.file_source(gr.sizeof_float*1, "/home/chance/Documents/Git/GNURadioDPD/InputData/CC3_imag.bin", True)
         self.blocks_file_source_0_0_0 = blocks.file_source(gr.sizeof_float*1, "/home/chance/DPD/CC2_imag_new.bin", True)
         self.blocks_file_source_0_0 = blocks.file_source(gr.sizeof_float*1, "/home/chance/DPD/CC1_imag_new.bin", True)
         self.blocks_file_source_0 = blocks.file_source(gr.sizeof_float*1, "/home/chance/DPD/CC1_real_new.bin", True)
@@ -336,7 +336,7 @@ class top_block(gr.top_block, Qt.QWidget):
     def set_samp_rate(self, samp_rate):
         self.samp_rate = samp_rate
         self.blocks_throttle_0.set_sample_rate(self.samp_rate)
-        self.qtgui_freq_sink_x_0.set_frequency_range(0, self.samp_rate*4)
+        self.qtgui_freq_sink_x_0.set_frequency_range(0, self.samp_rate)
 
     def get_mu(self):
         return self.mu
@@ -462,9 +462,9 @@ class top_block(gr.top_block, Qt.QWidget):
 
     def set_ScalingForPA(self, ScalingForPA):
         self.ScalingForPA = ScalingForPA
+        self.blocks_multiply_const_vxx_0.set_k((self.ScalingForPA, ))
         self.blocks_multiply_const_vxx_0_0.set_k((self.ScalingForPA, ))
         self.blocks_multiply_const_vxx_0_1.set_k((self.ScalingForPA, ))
-        self.blocks_multiply_const_vxx_0.set_k((self.ScalingForPA, ))
 
     def get_LoopDelay(self):
         return self.LoopDelay
