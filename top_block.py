@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Wed Mar  8 11:00:17 2017
+# Generated: Wed Mar  8 11:34:23 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -19,7 +19,6 @@ if __name__ == '__main__':
 from PyQt4 import Qt
 from gnuradio import analog
 from gnuradio import blocks
-from gnuradio import channels
 from gnuradio import eng_notation
 from gnuradio import filter
 from gnuradio import gr
@@ -67,9 +66,9 @@ class top_block(gr.top_block, Qt.QWidget):
         self.systemfs = systemfs = 38400000
         self.samp_rate = samp_rate = 38400000
         self.mu = mu = 0.0005
-        self.f3 = f3 = 0.1
+        self.f3 = f3 = 4
         self.f2 = f2 = 0
-        self.f1 = f1 = -0.1
+        self.f1 = f1 = -4
         self.dpd13_real = dpd13_real = 0.1
         self.dpd13_imag = dpd13_imag = 0.1
         self.beta7_real = beta7_real = 0
@@ -109,13 +108,13 @@ class top_block(gr.top_block, Qt.QWidget):
         self.tab.addTab(self.tab_widget_2, "DPD")
         self.top_grid_layout.addWidget(self.tab, 1, 0, 3,4)
         self.probe_signal = blocks.probe_signal_c()
-        self._f3_range = Range(-0.5, 0.5, 0.001, 0.1, 200)
+        self._f3_range = Range(-20, 20, 0.1, 4, 200)
         self._f3_win = RangeWidget(self._f3_range, self.set_f3, "f3", "counter_slider", float)
         self.tab_grid_layout_0.addWidget(self._f3_win,  0, 2, 1, 1)
-        self._f2_range = Range(-0.5, 0.5, 0.001, 0, 200)
+        self._f2_range = Range(-20, 20, 0.1, 0, 200)
         self._f2_win = RangeWidget(self._f2_range, self.set_f2, "f2", "counter_slider", float)
         self.tab_grid_layout_0.addWidget(self._f2_win,  0, 1, 1, 1)
-        self._f1_range = Range(-0.5, 0.5, 0.001, -0.1, 200)
+        self._f1_range = Range(-20, 20, 0.1, -4, 200)
         self._f1_win = RangeWidget(self._f1_range, self.set_f1, "f1", "counter_slider", float)
         self.tab_grid_layout_0.addWidget(self._f1_win,  0, 0, 1, 1)
         self._dpd13_real_range = Range(-0.1, 0.1, 0.0001, 0.1, 200)
@@ -213,32 +212,11 @@ class top_block(gr.top_block, Qt.QWidget):
         self.fir_filter_xxx_1.declare_sample_delay(0)
         self.fir_filter_xxx_0 = filter.fir_filter_ccc(1, ([-0.00074031,-0.00033842,-0.00030921,-0.00018513,4.4823e-05,0.00037567,0.00078312,0.0012225,0.0016318,0.0019373,0.0020639,0.0019464,0.0015426,0.00084479,-0.00011139,-0.0012438,-0.0024268,-0.0035019,-0.0042951,-0.0046403,-0.0044043,-0.0035124,-0.0019696,0.00012618,0.0025822,0.0051217,0.0074091,0.0090859,0.0098156,0.0093326,0.0074905,0.0042989,-5.3308e-05,-0.0051921,-0.010575,-0.015536,-0.019337,-0.021248,-0.020626,-0.016993,-0.010107,-6.0453e-06,0.012968,0.028176,0.044727,0.061543,0.077452,0.091293,0.10202,0.10882,0.11114,0.10882,0.10202,0.091293,0.077452,0.061543,0.044727,0.028176,0.012968,-6.0453e-06,-0.010107,-0.016993,-0.020626,-0.021248,-0.019337,-0.015536,-0.010575,-0.0051921,-5.3308e-05,0.0042989,0.0074905,0.0093326,0.0098156,0.0090859,0.0074091,0.0051217,0.0025822,0.00012618,-0.0019696,-0.0035124,-0.0044043,-0.0046403,-0.0042951,-0.0035019,-0.0024268,-0.0012438,-0.00011139,0.00084479,0.0015426,0.0019464,0.0020639,0.0019373,0.0016318,0.0012225,0.00078312,0.00037567,4.4823e-05,-0.00018513,-0.00030921,-0.00033842,-0.00074031]))
         self.fir_filter_xxx_0.declare_sample_delay(0)
-        self.channels_channel_model_0_0_0 = channels.channel_model(
-        	noise_voltage=0.0,
-        	frequency_offset=f3,
-        	epsilon=1.0,
-        	taps=(1.0 , ),
-        	noise_seed=0,
-        	block_tags=False
-        )
-        self.channels_channel_model_0_0 = channels.channel_model(
-        	noise_voltage=0.0,
-        	frequency_offset=f2,
-        	epsilon=1.0,
-        	taps=(1.0 , ),
-        	noise_seed=0,
-        	block_tags=False
-        )
-        self.channels_channel_model_0 = channels.channel_model(
-        	noise_voltage=0.0,
-        	frequency_offset=f1,
-        	epsilon=1.0,
-        	taps=(1.0 , ),
-        	noise_seed=0,
-        	block_tags=False
-        )
         self.blocks_throttle_0 = blocks.throttle(gr.sizeof_gr_complex*1, samp_rate,True)
         self.blocks_multiply_xx_4 = blocks.multiply_vcc(1)
+        self.blocks_multiply_xx_3_0_0_1 = blocks.multiply_vcc(1)
+        self.blocks_multiply_xx_3_0_0_0 = blocks.multiply_vcc(1)
+        self.blocks_multiply_xx_3_0_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_3_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_3 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_2 = blocks.multiply_vcc(1)
@@ -269,8 +247,11 @@ class top_block(gr.top_block, Qt.QWidget):
         self.analog_const_source_x_0_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, dpd13_imag)
         self.analog_const_source_x_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, dpd13_real)
         self.Test_W_LMS_0 = Test.W_LMS()
-        self.Test_TotalFreqShift_0_0_0_0 = Test.TotalFreqShift(int(3*(f3-f1)*systemfs), systemfs, 1)
+        self.Test_TotalFreqShift_0_1 = Test.TotalFreqShift(f1*1000000, samp_rate, 1)
+        self.Test_TotalFreqShift_0_0_0_0 = Test.TotalFreqShift(int(3*(f3-f1))*1000000/2, systemfs, 1)
         self.Test_TotalFreqShift_0_0_0 = Test.TotalFreqShift(int((f3-f1)*1000000), systemfs, -1)
+        self.Test_TotalFreqShift_0_0 = Test.TotalFreqShift(f2*1000000, samp_rate, 1)
+        self.Test_TotalFreqShift_0 = Test.TotalFreqShift(f3*1000000, samp_rate, 1)
         self.Test_MeanCorrelation_0 = Test.MeanCorrelation()
         self.Test_ConfigurablePA_0 = Test.ConfigurablePA(complex(beta1_real,beta1_imag), complex(beta3_real,beta3_imag), complex(beta5_real,beta5_imag), complex(beta7_real,beta7_imag), 0)
 
@@ -280,8 +261,11 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.Test_ConfigurablePA_0, 0), (self.blocks_multiply_xx_3, 0))    
         self.connect((self.Test_ConfigurablePA_0, 0), (self.qtgui_freq_sink_x_0, 1))    
         self.connect((self.Test_MeanCorrelation_0, 0), (self.fir_filter_xxx_1, 0))    
+        self.connect((self.Test_TotalFreqShift_0, 0), (self.blocks_multiply_xx_3_0_0, 1))    
+        self.connect((self.Test_TotalFreqShift_0_0, 0), (self.blocks_multiply_xx_3_0_0_0, 1))    
         self.connect((self.Test_TotalFreqShift_0_0_0, 0), (self.blocks_multiply_xx_3, 1))    
         self.connect((self.Test_TotalFreqShift_0_0_0_0, 0), (self.blocks_multiply_xx_3_0, 1))    
+        self.connect((self.Test_TotalFreqShift_0_1, 0), (self.blocks_multiply_xx_3_0_0_1, 1))    
         self.connect((self.Test_W_LMS_0, 0), (self.blocks_conjugate_cc_2, 0))    
         self.connect((self.analog_const_source_x_0, 0), (self.blocks_float_to_complex_1, 0))    
         self.connect((self.analog_const_source_x_0_0, 0), (self.blocks_float_to_complex_1, 1))    
@@ -299,10 +283,10 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_file_source_0_1, 0), (self.blocks_float_to_complex_0_0, 0))    
         self.connect((self.blocks_file_source_0_1_0, 0), (self.blocks_float_to_complex_0_0_0, 0))    
         self.connect((self.blocks_float_to_complex_0, 0), (self.blocks_multiply_const_vxx_0_0, 0))    
-        self.connect((self.blocks_float_to_complex_0, 0), (self.channels_channel_model_0, 0))    
+        self.connect((self.blocks_float_to_complex_0, 0), (self.blocks_multiply_xx_3_0_0_1, 0))    
         self.connect((self.blocks_float_to_complex_0_0, 0), (self.blocks_multiply_const_vxx_0_1, 0))    
-        self.connect((self.blocks_float_to_complex_0_0, 0), (self.channels_channel_model_0_0, 0))    
-        self.connect((self.blocks_float_to_complex_0_0_0, 0), (self.channels_channel_model_0_0_0, 0))    
+        self.connect((self.blocks_float_to_complex_0_0, 0), (self.blocks_multiply_xx_3_0_0_0, 0))    
+        self.connect((self.blocks_float_to_complex_0_0_0, 0), (self.blocks_multiply_xx_3_0_0, 0))    
         self.connect((self.blocks_float_to_complex_1, 0), (self.blocks_multiply_xx_4, 0))    
         self.connect((self.blocks_multiply_const_vxx_0, 0), (self.blocks_throttle_0, 0))    
         self.connect((self.blocks_multiply_const_vxx_0_0, 0), (self.blocks_multiply_xx_1, 0))    
@@ -317,11 +301,11 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_multiply_xx_2, 0), (self.blocks_multiply_xx_4, 1))    
         self.connect((self.blocks_multiply_xx_3, 0), (self.fir_filter_xxx_0, 0))    
         self.connect((self.blocks_multiply_xx_3_0, 0), (self.blocks_add_xx_0_0, 1))    
+        self.connect((self.blocks_multiply_xx_3_0_0, 0), (self.blocks_multiply_const_vxx_2_0, 0))    
+        self.connect((self.blocks_multiply_xx_3_0_0_0, 0), (self.blocks_multiply_const_vxx_2_1, 0))    
+        self.connect((self.blocks_multiply_xx_3_0_0_1, 0), (self.blocks_multiply_const_vxx_2, 0))    
         self.connect((self.blocks_multiply_xx_4, 0), (self.blocks_multiply_xx_3_0, 0))    
         self.connect((self.blocks_throttle_0, 0), (self.blocks_add_xx_0_0, 0))    
-        self.connect((self.channels_channel_model_0, 0), (self.blocks_multiply_const_vxx_2, 0))    
-        self.connect((self.channels_channel_model_0_0, 0), (self.blocks_multiply_const_vxx_2_1, 0))    
-        self.connect((self.channels_channel_model_0_0_0, 0), (self.blocks_multiply_const_vxx_2_0, 0))    
         self.connect((self.fir_filter_xxx_0, 0), (self.blocks_conjugate_cc_1, 0))    
         self.connect((self.fir_filter_xxx_1, 0), (self.blocks_multiply_const_vxx_1, 0))    
 
@@ -363,21 +347,25 @@ class top_block(gr.top_block, Qt.QWidget):
 
     def set_f3(self, f3):
         self.f3 = f3
-        self.channels_channel_model_0_0_0.set_frequency_offset(self.f3)
+        self.Test_TotalFreqShift_0_0_0. set_shift_freq(int((self.f3-self.f1)*1000000)) 
+        self.Test_TotalFreqShift_0. set_shift_freq(self.f3*1000000) 
+        self.Test_TotalFreqShift_0_0_0_0. set_shift_freq(int(3*(self.f3-self.f1))*1000000/2) 
 
     def get_f2(self):
         return self.f2
 
     def set_f2(self, f2):
         self.f2 = f2
-        self.channels_channel_model_0_0.set_frequency_offset(self.f2)
+        self.Test_TotalFreqShift_0_0. set_shift_freq(self.f2*1000000) 
 
     def get_f1(self):
         return self.f1
 
     def set_f1(self, f1):
         self.f1 = f1
-        self.channels_channel_model_0.set_frequency_offset(self.f1)
+        self.Test_TotalFreqShift_0_0_0. set_shift_freq(int((self.f3-self.f1)*1000000)) 
+        self.Test_TotalFreqShift_0_1. set_shift_freq(self.f1*1000000) 
+        self.Test_TotalFreqShift_0_0_0_0. set_shift_freq(int(3*(self.f3-self.f1))*1000000/2) 
 
     def get_dpd13_real(self):
         return self.dpd13_real
