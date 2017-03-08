@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Wed Mar  8 12:24:32 2017
+# Generated: Wed Mar  8 12:26:36 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -260,7 +260,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.Test_TotalFreqShift_0_1 = Test.TotalFreqShift(f1*1000000, samp_rate, 1)
         self.Test_TotalFreqShift_0_0_0_0_0 = Test.TotalFreqShift((2*f1-f3)*1000000, systemfs, 1)
         self.Test_TotalFreqShift_0_0_0_0 = Test.TotalFreqShift((2*f3-f1)*1000000, systemfs, 1)
-        self.Test_TotalFreqShift_0_0_0 = Test.TotalFreqShift(int((f3-f1)*1000000), systemfs, -1)
+        self.Test_TotalFreqShift_0_0_0 = Test.TotalFreqShift(-(2*f3-f1)*1000000, systemfs, -1)
         self.Test_TotalFreqShift_0_0 = Test.TotalFreqShift(f2*1000000, samp_rate, 1)
         self.Test_TotalFreqShift_0 = Test.TotalFreqShift(f3*1000000, samp_rate, 1)
         self.Test_MeanCorrelation_0 = Test.MeanCorrelation()
@@ -389,10 +389,10 @@ class top_block(gr.top_block, Qt.QWidget):
 
     def set_f3(self, f3):
         self.f3 = f3
-        self.Test_TotalFreqShift_0_0_0. set_shift_freq(int((self.f3-self.f1)*1000000)) 
         self.Test_TotalFreqShift_0. set_shift_freq(self.f3*1000000) 
         self.Test_TotalFreqShift_0_0_0_0_0. set_shift_freq((2*self.f1-self.f3)*1000000) 
         self.Test_TotalFreqShift_0_0_0_0. set_shift_freq((2*self.f3-self.f1)*1000000) 
+        self.Test_TotalFreqShift_0_0_0. set_shift_freq(-(2*self.f3-self.f1)*1000000) 
 
     def get_f2(self):
         return self.f2
@@ -406,10 +406,10 @@ class top_block(gr.top_block, Qt.QWidget):
 
     def set_f1(self, f1):
         self.f1 = f1
-        self.Test_TotalFreqShift_0_0_0. set_shift_freq(int((self.f3-self.f1)*1000000)) 
         self.Test_TotalFreqShift_0_1. set_shift_freq(self.f1*1000000) 
         self.Test_TotalFreqShift_0_0_0_0_0. set_shift_freq((2*self.f1-self.f3)*1000000) 
         self.Test_TotalFreqShift_0_0_0_0. set_shift_freq((2*self.f3-self.f1)*1000000) 
+        self.Test_TotalFreqShift_0_0_0. set_shift_freq(-(2*self.f3-self.f1)*1000000) 
 
     def get_dpd13_real(self):
         return self.dpd13_real

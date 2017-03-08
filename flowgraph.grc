@@ -1302,7 +1302,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1376, 2111)</value>
+      <value>(1376, 2055)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1569,7 +1569,7 @@
     </param>
     <param>
       <key>shift_freq</key>
-      <value>int((f3-f1)*1000000)</value>
+      <value>-(2*f3-f1)*1000000</value>
     </param>
   </block>
   <block>
@@ -2375,7 +2375,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1224, 2071)</value>
+      <value>(1224, 2015)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -4650,7 +4650,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1376, 2071)</value>
+      <value>(1376, 2015)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -4984,7 +4984,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1224, 1997)</value>
+      <value>(1224, 1901)</value>
     </param>
     <param>
       <key>gui_hint</key>
