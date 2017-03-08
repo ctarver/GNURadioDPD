@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Wed Mar  8 10:42:11 2017
+# Generated: Wed Mar  8 11:00:17 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -70,6 +70,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self.f3 = f3 = 0.1
         self.f2 = f2 = 0
         self.f1 = f1 = -0.1
+        self.dpd13_real = dpd13_real = 0.1
+        self.dpd13_imag = dpd13_imag = 0.1
         self.beta7_real = beta7_real = 0
         self.beta7_imag = beta7_imag = 0
         self.beta5_real = beta5_real = 0
@@ -100,6 +102,11 @@ class top_block(gr.top_block, Qt.QWidget):
         self.tab_grid_layout_1 = Qt.QGridLayout()
         self.tab_layout_1.addLayout(self.tab_grid_layout_1)
         self.tab.addTab(self.tab_widget_1, "PA Paramters")
+        self.tab_widget_2 = Qt.QWidget()
+        self.tab_layout_2 = Qt.QBoxLayout(Qt.QBoxLayout.TopToBottom, self.tab_widget_2)
+        self.tab_grid_layout_2 = Qt.QGridLayout()
+        self.tab_layout_2.addLayout(self.tab_grid_layout_2)
+        self.tab.addTab(self.tab_widget_2, "DPD")
         self.top_grid_layout.addWidget(self.tab, 1, 0, 3,4)
         self.probe_signal = blocks.probe_signal_c()
         self._f3_range = Range(-0.5, 0.5, 0.001, 0.1, 200)
@@ -111,6 +118,12 @@ class top_block(gr.top_block, Qt.QWidget):
         self._f1_range = Range(-0.5, 0.5, 0.001, -0.1, 200)
         self._f1_win = RangeWidget(self._f1_range, self.set_f1, "f1", "counter_slider", float)
         self.tab_grid_layout_0.addWidget(self._f1_win,  0, 0, 1, 1)
+        self._dpd13_real_range = Range(-0.1, 0.1, 0.0001, 0.1, 200)
+        self._dpd13_real_win = RangeWidget(self._dpd13_real_range, self.set_dpd13_real, "dpd13_real", "counter_slider", float)
+        self.tab_grid_layout_2.addWidget(self._dpd13_real_win,  0, 3, 1, 1)
+        self._dpd13_imag_range = Range(-0.1, 0.1, 0.0001, 0.1, 200)
+        self._dpd13_imag_win = RangeWidget(self._dpd13_imag_range, self.set_dpd13_imag, "dpd13_imag", "counter_slider", float)
+        self.tab_grid_layout_2.addWidget(self._dpd13_imag_win,  1, 3, 1, 1)
         self._beta7_real_range = Range(-0.1, 0.1, 0.0001, 0, 200)
         self._beta7_real_win = RangeWidget(self._beta7_real_range, self.set_beta7_real, "beta7_real", "counter_slider", float)
         self.tab_grid_layout_1.addWidget(self._beta7_real_win,  0, 3, 1, 1)
@@ -166,7 +179,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.qtgui_freq_sink_x_0.set_update_time(0.10)
         self.qtgui_freq_sink_x_0.set_y_axis(-100, -15)
         self.qtgui_freq_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, 0.0, 0, "")
-        self.qtgui_freq_sink_x_0.enable_autoscale(True)
+        self.qtgui_freq_sink_x_0.enable_autoscale(False)
         self.qtgui_freq_sink_x_0.enable_grid(True)
         self.qtgui_freq_sink_x_0.set_fft_average(0.2)
         self.qtgui_freq_sink_x_0.enable_control_panel(False)
@@ -253,11 +266,11 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_conjugate_cc_0 = blocks.conjugate_cc()
         self.blocks_add_xx_0_0 = blocks.add_vcc(1)
         self.blocks_add_xx_0 = blocks.add_vcc(1)
-        self.analog_const_source_x_0_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, alpha_imag)
-        self.analog_const_source_x_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, alpha_real)
+        self.analog_const_source_x_0_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, dpd13_imag)
+        self.analog_const_source_x_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, dpd13_real)
         self.Test_W_LMS_0 = Test.W_LMS()
-        self.Test_TotalFreqShift_0_0_0_0 = Test.TotalFreqShift(0, systemfs, 1)
-        self.Test_TotalFreqShift_0_0_0 = Test.TotalFreqShift(9000000*2, systemfs, -1)
+        self.Test_TotalFreqShift_0_0_0_0 = Test.TotalFreqShift(int(3*(f3-f1)*systemfs), systemfs, 1)
+        self.Test_TotalFreqShift_0_0_0 = Test.TotalFreqShift(int((f3-f1)*1000000), systemfs, -1)
         self.Test_MeanCorrelation_0 = Test.MeanCorrelation()
         self.Test_ConfigurablePA_0 = Test.ConfigurablePA(complex(beta1_real,beta1_imag), complex(beta3_real,beta3_imag), complex(beta5_real,beta5_imag), complex(beta7_real,beta7_imag), 0)
 
@@ -366,6 +379,20 @@ class top_block(gr.top_block, Qt.QWidget):
         self.f1 = f1
         self.channels_channel_model_0.set_frequency_offset(self.f1)
 
+    def get_dpd13_real(self):
+        return self.dpd13_real
+
+    def set_dpd13_real(self, dpd13_real):
+        self.dpd13_real = dpd13_real
+        self.analog_const_source_x_0.set_offset(self.dpd13_real)
+
+    def get_dpd13_imag(self):
+        return self.dpd13_imag
+
+    def set_dpd13_imag(self, dpd13_imag):
+        self.dpd13_imag = dpd13_imag
+        self.analog_const_source_x_0_0.set_offset(self.dpd13_imag)
+
     def get_beta7_real(self):
         return self.beta7_real
 
@@ -427,14 +454,12 @@ class top_block(gr.top_block, Qt.QWidget):
 
     def set_alpha_real(self, alpha_real):
         self.alpha_real = alpha_real
-        self.analog_const_source_x_0.set_offset(self.alpha_real)
 
     def get_alpha_imag(self):
         return self.alpha_imag
 
     def set_alpha_imag(self, alpha_imag):
         self.alpha_imag = alpha_imag
-        self.analog_const_source_x_0_0.set_offset(self.alpha_imag)
 
     def get_a3(self):
         return self.a3

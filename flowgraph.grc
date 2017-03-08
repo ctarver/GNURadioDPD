@@ -890,6 +890,132 @@
     </param>
     <param>
       <key>value</key>
+      <value>0.1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(768, 657)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>tab@2: 1, 3, 1, 1</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>dpd13_imag</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>dpd13_imag</value>
+    </param>
+    <param>
+      <key>min_len</key>
+      <value>200</value>
+    </param>
+    <param>
+      <key>orient</key>
+      <value>Qt.Horizontal</value>
+    </param>
+    <param>
+      <key>start</key>
+      <value>-0.1</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>0.0001</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>0.1</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_range</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0.1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(768, 561)</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>tab@2: 0, 3, 1, 1</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>dpd13_real</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>dpd13_real</value>
+    </param>
+    <param>
+      <key>min_len</key>
+      <value>200</value>
+    </param>
+    <param>
+      <key>orient</key>
+      <value>Qt.Horizontal</value>
+    </param>
+    <param>
+      <key>start</key>
+      <value>-0.1</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>0.0001</value>
+    </param>
+    <param>
+      <key>stop</key>
+      <value>0.1</value>
+    </param>
+    <param>
+      <key>rangeType</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+  </block>
+  <block>
+    <key>variable_qtgui_range</key>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
       <value>-0.1</value>
     </param>
     <param>
@@ -898,7 +1024,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(192, 71)</value>
+      <value>(168, 71)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -961,7 +1087,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(280, 71)</value>
+      <value>(256, 71)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1024,7 +1150,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(368, 71)</value>
+      <value>(344, 71)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1309,57 +1435,6 @@
     </param>
     <param>
       <key>direction</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(1264, 91)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>Test_TotalFreqShift_0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>systemfs</key>
-      <value>systemfs</value>
-    </param>
-    <param>
-      <key>shift_freq</key>
-      <value>f1</value>
-    </param>
-  </block>
-  <block>
-    <key>Test_TotalFreqShift</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>direction</key>
       <value>-1</value>
     </param>
     <param>
@@ -1368,7 +1443,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(40, 1195)</value>
+      <value>(40, 1187)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1392,7 +1467,7 @@
     </param>
     <param>
       <key>shift_freq</key>
-      <value>9000000*2</value>
+      <value>int((f3-f1)*1000000)</value>
     </param>
   </block>
   <block>
@@ -1443,7 +1518,7 @@
     </param>
     <param>
       <key>shift_freq</key>
-      <value>0</value>
+      <value>int(3*(f3-f1)*systemfs)</value>
     </param>
   </block>
   <block>
@@ -1497,7 +1572,7 @@
     </param>
     <param>
       <key>const</key>
-      <value>alpha_real</value>
+      <value>dpd13_real</value>
     </param>
     <param>
       <key>affinity</key>
@@ -1544,7 +1619,7 @@
     </param>
     <param>
       <key>const</key>
-      <value>alpha_imag</value>
+      <value>dpd13_imag</value>
     </param>
     <param>
       <key>affinity</key>
@@ -1924,7 +1999,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/chance/DPD/CC1_real_new.bin</value>
+      <value>/home/chance/Documents/Git/GNURadioDPD/InputData/CC1_real.bin</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1979,7 +2054,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/chance/DPD/CC1_imag_new.bin</value>
+      <value>/home/chance/Documents/Git/GNURadioDPD/InputData/CC1_imag.bin</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2034,7 +2109,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/chance/DPD/CC2_imag_new.bin</value>
+      <value>/home/chance/Documents/Git/GNURadioDPD/InputData/CC1_imag.bin</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2144,7 +2219,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/chance/DPD/CC2_real_new.bin</value>
+      <value>/home/chance/Documents/Git/GNURadioDPD/InputData/CC2_real.bin</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4133,7 +4208,7 @@
     </param>
     <param>
       <key>label2</key>
-      <value>Tab 2</value>
+      <value>DPD</value>
     </param>
     <param>
       <key>label3</key>
@@ -4165,7 +4240,7 @@
     </param>
     <param>
       <key>num_tabs</key>
-      <value>2</value>
+      <value>3</value>
     </param>
   </block>
   <block>
