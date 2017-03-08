@@ -19,7 +19,7 @@
   <param>
     <name>Shift Amount</name>
     <key>shift_freq</key>
-    <type>int</type>
+    <type>float</type>
   </param>
   <param>
     <name>Sampling Freq</name>

@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Wed Mar  8 11:57:46 2017
+# Generated: Wed Mar  8 12:24:32 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -68,9 +68,9 @@ class top_block(gr.top_block, Qt.QWidget):
         self.systemfs = systemfs = 38400000
         self.samp_rate = samp_rate = 38400000
         self.mu = mu = 0.0005
-        self.f3 = f3 = 4
+        self.f3 = f3 = 2.1
         self.f2 = f2 = 0
-        self.f1 = f1 = -4
+        self.f1 = f1 = -3
         self.dpd13_real = dpd13_real = -beta3_real
         self.dpd13_imag = dpd13_imag = -beta3_imag
         self.beta7_real = beta7_real = 0
@@ -114,13 +114,13 @@ class top_block(gr.top_block, Qt.QWidget):
         self._beta3_imag_win = RangeWidget(self._beta3_imag_range, self.set_beta3_imag, "beta3_imag", "counter_slider", float)
         self.tab_grid_layout_1.addWidget(self._beta3_imag_win,  1, 1, 1, 1)
         self.probe_signal = blocks.probe_signal_c()
-        self._f3_range = Range(-20, 20, 0.1, 4, 200)
+        self._f3_range = Range(-20, 20, 0.1, 2.1, 200)
         self._f3_win = RangeWidget(self._f3_range, self.set_f3, "f3", "counter_slider", float)
         self.tab_grid_layout_0.addWidget(self._f3_win,  0, 2, 1, 1)
         self._f2_range = Range(-20, 20, 0.1, 0, 200)
         self._f2_win = RangeWidget(self._f2_range, self.set_f2, "f2", "counter_slider", float)
         self.tab_grid_layout_0.addWidget(self._f2_win,  0, 1, 1, 1)
-        self._f1_range = Range(-20, 20, 0.1, -4, 200)
+        self._f1_range = Range(-20, 20, 0.1, -3, 200)
         self._f1_win = RangeWidget(self._f1_range, self.set_f1, "f1", "counter_slider", float)
         self.tab_grid_layout_0.addWidget(self._f1_win,  0, 0, 1, 1)
         self._dpd13_real_range = Range(-0.1, 0.1, 0.0001, -beta3_real, 200)
@@ -173,7 +173,7 @@ class top_block(gr.top_block, Qt.QWidget):
         	0, #fc
         	samp_rate, #bw
         	"IM3+ DPD Spectrum", #name
-        	2 #number of inputs
+        	3 #number of inputs
         )
         self.qtgui_freq_sink_x_0.set_update_time(0.10)
         self.qtgui_freq_sink_x_0.set_y_axis(-100, -15)
@@ -189,15 +189,15 @@ class top_block(gr.top_block, Qt.QWidget):
         if "complex" == "float" or "complex" == "msg_float":
           self.qtgui_freq_sink_x_0.set_plot_pos_half(not True)
         
-        labels = ["Original", "PostPA", "", "", "",
+        labels = ["Original", "PrePA", "PostPA", "", "",
                   "", "", "", "", ""]
         widths = [1, 1, 1, 1, 1,
                   1, 1, 1, 1, 1]
-        colors = ["blue", "red", "green", "black", "cyan",
+        colors = ["blue", "dark blue", "red", "black", "cyan",
                   "magenta", "yellow", "dark red", "dark green", "dark blue"]
         alphas = [1.0, 1.0, 1.0, 1.0, 1.0,
                   1.0, 1.0, 1.0, 1.0, 1.0]
-        for i in xrange(2):
+        for i in xrange(3):
             if len(labels[i]) == 0:
                 self.qtgui_freq_sink_x_0.set_line_label(i, "Data {0}".format(i))
             else:
@@ -258,8 +258,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self.analog_const_source_x_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, dpd13_real)
         self.Test_W_LMS_0 = Test.W_LMS()
         self.Test_TotalFreqShift_0_1 = Test.TotalFreqShift(f1*1000000, samp_rate, 1)
-        self.Test_TotalFreqShift_0_0_0_0_0 = Test.TotalFreqShift(int(2*f1-f3)*1000000, systemfs, 1)
-        self.Test_TotalFreqShift_0_0_0_0 = Test.TotalFreqShift(int(2*f3-f1)*1000000, systemfs, 1)
+        self.Test_TotalFreqShift_0_0_0_0_0 = Test.TotalFreqShift((2*f1-f3)*1000000, systemfs, 1)
+        self.Test_TotalFreqShift_0_0_0_0 = Test.TotalFreqShift((2*f3-f1)*1000000, systemfs, 1)
         self.Test_TotalFreqShift_0_0_0 = Test.TotalFreqShift(int((f3-f1)*1000000), systemfs, -1)
         self.Test_TotalFreqShift_0_0 = Test.TotalFreqShift(f2*1000000, samp_rate, 1)
         self.Test_TotalFreqShift_0 = Test.TotalFreqShift(f3*1000000, samp_rate, 1)
@@ -270,7 +270,7 @@ class top_block(gr.top_block, Qt.QWidget):
         # Connections
         ##################################################
         self.connect((self.Test_ConfigurablePA_0, 0), (self.blocks_multiply_xx_3, 0))    
-        self.connect((self.Test_ConfigurablePA_0, 0), (self.qtgui_freq_sink_x_0, 1))    
+        self.connect((self.Test_ConfigurablePA_0, 0), (self.qtgui_freq_sink_x_0, 2))    
         self.connect((self.Test_MeanCorrelation_0, 0), (self.fir_filter_xxx_1, 0))    
         self.connect((self.Test_TotalFreqShift_0, 0), (self.blocks_multiply_xx_3_0_0, 1))    
         self.connect((self.Test_TotalFreqShift_0_0, 0), (self.blocks_multiply_xx_3_0_0_0, 1))    
@@ -285,7 +285,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.analog_const_source_x_0_1, 0), (self.blocks_float_to_complex_1_0, 0))    
         self.connect((self.blocks_add_xx_0, 0), (self.blocks_multiply_const_vxx_0, 0))    
         self.connect((self.blocks_add_xx_0_0, 0), (self.Test_ConfigurablePA_0, 0))    
-        self.connect((self.blocks_add_xx_0_0, 0), (self.qtgui_freq_sink_x_0, 0))    
+        self.connect((self.blocks_add_xx_0_0, 0), (self.qtgui_freq_sink_x_0, 1))    
         self.connect((self.blocks_conjugate_cc_0, 0), (self.blocks_multiply_xx_2, 1))    
         self.connect((self.blocks_conjugate_cc_0_0, 0), (self.blocks_multiply_xx_2_0, 1))    
         self.connect((self.blocks_conjugate_cc_1, 0), (self.Test_MeanCorrelation_0, 0))    
@@ -331,6 +331,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_multiply_xx_4, 0), (self.blocks_multiply_xx_3_0, 0))    
         self.connect((self.blocks_multiply_xx_4_0, 0), (self.blocks_multiply_xx_3_0_1, 0))    
         self.connect((self.blocks_throttle_0, 0), (self.blocks_add_xx_0_0, 0))    
+        self.connect((self.blocks_throttle_0, 0), (self.qtgui_freq_sink_x_0, 0))    
         self.connect((self.fir_filter_xxx_0, 0), (self.blocks_conjugate_cc_1, 0))    
         self.connect((self.fir_filter_xxx_1, 0), (self.blocks_multiply_const_vxx_1, 0))    
 
@@ -388,10 +389,10 @@ class top_block(gr.top_block, Qt.QWidget):
 
     def set_f3(self, f3):
         self.f3 = f3
-        self.Test_TotalFreqShift_0. set_shift_freq(self.f3*1000000) 
         self.Test_TotalFreqShift_0_0_0. set_shift_freq(int((self.f3-self.f1)*1000000)) 
-        self.Test_TotalFreqShift_0_0_0_0_0. set_shift_freq(int(2*self.f1-self.f3)*1000000) 
-        self.Test_TotalFreqShift_0_0_0_0. set_shift_freq(int(2*self.f3-self.f1)*1000000) 
+        self.Test_TotalFreqShift_0. set_shift_freq(self.f3*1000000) 
+        self.Test_TotalFreqShift_0_0_0_0_0. set_shift_freq((2*self.f1-self.f3)*1000000) 
+        self.Test_TotalFreqShift_0_0_0_0. set_shift_freq((2*self.f3-self.f1)*1000000) 
 
     def get_f2(self):
         return self.f2
@@ -407,8 +408,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self.f1 = f1
         self.Test_TotalFreqShift_0_0_0. set_shift_freq(int((self.f3-self.f1)*1000000)) 
         self.Test_TotalFreqShift_0_1. set_shift_freq(self.f1*1000000) 
-        self.Test_TotalFreqShift_0_0_0_0_0. set_shift_freq(int(2*self.f1-self.f3)*1000000) 
-        self.Test_TotalFreqShift_0_0_0_0. set_shift_freq(int(2*self.f3-self.f1)*1000000) 
+        self.Test_TotalFreqShift_0_0_0_0_0. set_shift_freq((2*self.f1-self.f3)*1000000) 
+        self.Test_TotalFreqShift_0_0_0_0. set_shift_freq((2*self.f3-self.f1)*1000000) 
 
     def get_dpd13_real(self):
         return self.dpd13_real

@@ -42,7 +42,7 @@ class TotalFreqShift(gr.sync_block):
         # <+signal processing here+>
         array = numpy.linspace(self.n,self.n+length-1,length)
         self.n = self.n+length     #Update counter for next time
-        out[:] =  numpy.exp(self.direction*numpy.pi*1j*array*self.ShiftAmount/self.SystemFS)
+        out[:] =  numpy.exp(2*self.direction*numpy.pi*1j*array*self.ShiftAmount/self.SystemFS)
         return len(output_items[0])
 
     def set_shift_freq(self,shift_freq):
