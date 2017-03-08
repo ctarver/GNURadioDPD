@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Tue Mar  7 15:37:31 2017
+# Generated: Wed Mar  8 10:42:11 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -166,7 +166,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.qtgui_freq_sink_x_0.set_update_time(0.10)
         self.qtgui_freq_sink_x_0.set_y_axis(-100, -15)
         self.qtgui_freq_sink_x_0.set_trigger_mode(qtgui.TRIG_MODE_FREE, 0.0, 0, "")
-        self.qtgui_freq_sink_x_0.enable_autoscale(False)
+        self.qtgui_freq_sink_x_0.enable_autoscale(True)
         self.qtgui_freq_sink_x_0.enable_grid(True)
         self.qtgui_freq_sink_x_0.set_fft_average(0.2)
         self.qtgui_freq_sink_x_0.enable_control_panel(False)
@@ -242,11 +242,11 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_float_to_complex_0_0 = blocks.float_to_complex(1)
         self.blocks_float_to_complex_0 = blocks.float_to_complex(1)
         self.blocks_file_source_0_1_0 = blocks.file_source(gr.sizeof_float*1, "/home/chance/Documents/Git/GNURadioDPD/InputData/CC3_real.bin", True)
-        self.blocks_file_source_0_1 = blocks.file_source(gr.sizeof_float*1, "/home/chance/DPD/CC2_real_new.bin", True)
+        self.blocks_file_source_0_1 = blocks.file_source(gr.sizeof_float*1, "/home/chance/Documents/Git/GNURadioDPD/InputData/CC2_real.bin", True)
         self.blocks_file_source_0_0_1 = blocks.file_source(gr.sizeof_float*1, "/home/chance/Documents/Git/GNURadioDPD/InputData/CC3_imag.bin", True)
-        self.blocks_file_source_0_0_0 = blocks.file_source(gr.sizeof_float*1, "/home/chance/DPD/CC2_imag_new.bin", True)
-        self.blocks_file_source_0_0 = blocks.file_source(gr.sizeof_float*1, "/home/chance/DPD/CC1_imag_new.bin", True)
-        self.blocks_file_source_0 = blocks.file_source(gr.sizeof_float*1, "/home/chance/DPD/CC1_real_new.bin", True)
+        self.blocks_file_source_0_0_0 = blocks.file_source(gr.sizeof_float*1, "/home/chance/Documents/Git/GNURadioDPD/InputData/CC1_imag.bin", True)
+        self.blocks_file_source_0_0 = blocks.file_source(gr.sizeof_float*1, "/home/chance/Documents/Git/GNURadioDPD/InputData/CC1_imag.bin", True)
+        self.blocks_file_source_0 = blocks.file_source(gr.sizeof_float*1, "/home/chance/Documents/Git/GNURadioDPD/InputData/CC1_real.bin", True)
         self.blocks_delay_0 = blocks.delay(gr.sizeof_gr_complex*1, LoopDelay)
         self.blocks_conjugate_cc_2 = blocks.conjugate_cc()
         self.blocks_conjugate_cc_1 = blocks.conjugate_cc()
