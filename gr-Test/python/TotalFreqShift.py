@@ -45,3 +45,5 @@ class TotalFreqShift(gr.sync_block):
         out[:] =  numpy.exp(self.direction*numpy.pi*1j*array*self.ShiftAmount/self.SystemFS)
         return len(output_items[0])
 
+    def set_shift_freq(self,shift_freq):
+        self.ShiftAmount = shift_freq

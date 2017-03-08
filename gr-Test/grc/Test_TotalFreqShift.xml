@@ -5,6 +5,7 @@
   <category>Test</category>
   <import>import Test</import>
   <make>Test.TotalFreqShift($shift_freq, $systemfs, $direction)</make>
+  <callback> set_shift_freq($shift_freq) </callback>
   <!-- Make one 'param' node for every Parameter you want settable from the GUI.
        Sub-nodes:
        * name
