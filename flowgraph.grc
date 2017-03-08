@@ -1924,7 +1924,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/chance/DPD/CC1_real_new.bin</value>
+      <value>/home/chance/Documents/Git/GNURadioDPD/InputData/CC1_real.bin</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -1979,7 +1979,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/chance/DPD/CC1_imag_new.bin</value>
+      <value>/home/chance/Documents/Git/GNURadioDPD/InputData/CC1_imag.bin</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2034,7 +2034,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/chance/DPD/CC2_imag_new.bin</value>
+      <value>/home/chance/Documents/Git/GNURadioDPD/InputData/CC1_imag.bin</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2144,7 +2144,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/chance/DPD/CC2_real_new.bin</value>
+      <value>/home/chance/Documents/Git/GNURadioDPD/InputData/CC2_real.bin</value>
     </param>
     <param>
       <key>_coordinate</key>
