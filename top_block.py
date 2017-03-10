@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Fri Mar 10 15:07:15 2017
+# Generated: Fri Mar 10 17:05:22 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -88,6 +88,9 @@ class top_block(gr.top_block, Qt.QWidget):
         self.DPD21_3 = DPD21_3 = 0
         self.DPD13_3 = DPD13_3 = 0
         self.DPD12_3 = DPD12_3 = 0
+        self.DPD123_1 = DPD123_1 = 0
+        self.DPD123_0 = DPD123_0 = 0
+        self.DPD123 = DPD123 = 0
 
         ##################################################
         # Blocks
@@ -199,6 +202,27 @@ class top_block(gr.top_block, Qt.QWidget):
         self._DPD12_3_callback(self.DPD12_3)
         _DPD12_3_check_box.stateChanged.connect(lambda i: self.set_DPD12_3(self._DPD12_3_choices[bool(i)]))
         self.tab_grid_layout_2.addWidget(_DPD12_3_check_box,  0, 3, 1, 1)
+        _DPD123_1_check_box = Qt.QCheckBox("IM 1,2,~3")
+        self._DPD123_1_choices = {True: 1, False: 0}
+        self._DPD123_1_choices_inv = dict((v,k) for k,v in self._DPD123_1_choices.iteritems())
+        self._DPD123_1_callback = lambda i: Qt.QMetaObject.invokeMethod(_DPD123_1_check_box, "setChecked", Qt.Q_ARG("bool", self._DPD123_1_choices_inv[i]))
+        self._DPD123_1_callback(self.DPD123_1)
+        _DPD123_1_check_box.stateChanged.connect(lambda i: self.set_DPD123_1(self._DPD123_1_choices[bool(i)]))
+        self.tab_grid_layout_2.addWidget(_DPD123_1_check_box,  0, 6, 1, 1)
+        _DPD123_0_check_box = Qt.QCheckBox("IM 1,~2,3")
+        self._DPD123_0_choices = {True: 1, False: 0}
+        self._DPD123_0_choices_inv = dict((v,k) for k,v in self._DPD123_0_choices.iteritems())
+        self._DPD123_0_callback = lambda i: Qt.QMetaObject.invokeMethod(_DPD123_0_check_box, "setChecked", Qt.Q_ARG("bool", self._DPD123_0_choices_inv[i]))
+        self._DPD123_0_callback(self.DPD123_0)
+        _DPD123_0_check_box.stateChanged.connect(lambda i: self.set_DPD123_0(self._DPD123_0_choices[bool(i)]))
+        self.tab_grid_layout_2.addWidget(_DPD123_0_check_box,  0, 5, 1, 1)
+        _DPD123_check_box = Qt.QCheckBox("IM ~1,2,3")
+        self._DPD123_choices = {True: 1, False: 0}
+        self._DPD123_choices_inv = dict((v,k) for k,v in self._DPD123_choices.iteritems())
+        self._DPD123_callback = lambda i: Qt.QMetaObject.invokeMethod(_DPD123_check_box, "setChecked", Qt.Q_ARG("bool", self._DPD123_choices_inv[i]))
+        self._DPD123_callback(self.DPD123)
+        _DPD123_check_box.stateChanged.connect(lambda i: self.set_DPD123(self._DPD123_choices[bool(i)]))
+        self.tab_grid_layout_2.addWidget(_DPD123_check_box,  0, 4, 1, 1)
         self.qtgui_freq_sink_x_0 = qtgui.freq_sink_c(
         	1024, #size
         	firdes.WIN_HAMMING, #wintype
@@ -241,6 +265,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self._qtgui_freq_sink_x_0_win = sip.wrapinstance(self.qtgui_freq_sink_x_0.pyqwidget(), Qt.QWidget)
         self.top_grid_layout.addWidget(self._qtgui_freq_sink_x_0_win, 0,0,1,4)
         self.blocks_throttle_0 = blocks.throttle(gr.sizeof_gr_complex*1, samp_rate,True)
+        self.blocks_multiply_xx_5_0_0 = blocks.multiply_vcc(1)
+        self.blocks_multiply_xx_5_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_5 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_4_0_0_0_0_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_4_0_0_0_0 = blocks.multiply_vcc(1)
@@ -257,6 +283,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_multiply_xx_3_0_0_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_3_0_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_3_0 = blocks.multiply_vcc(1)
+        self.blocks_multiply_xx_2_0_0_0_0_0_0_0_0_0 = blocks.multiply_vcc(1)
+        self.blocks_multiply_xx_2_0_0_0_0_0_0_0_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_2_0_0_0_0_0_0_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_2_0_0_0_0_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_2_0_0_0_0 = blocks.multiply_vcc(1)
@@ -270,16 +298,27 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_multiply_xx_1_0_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_1_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_1 = blocks.multiply_vcc(1)
+        self.blocks_multiply_xx_0_0_0 = blocks.multiply_vcc(1)
+        self.blocks_multiply_xx_0_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_xx_0 = blocks.multiply_vcc(1)
         self.blocks_multiply_const_vxx_2_2_0 = blocks.multiply_const_vcc((a1, ))
         self.blocks_multiply_const_vxx_2_1 = blocks.multiply_const_vcc((a2, ))
         self.blocks_multiply_const_vxx_2_0 = blocks.multiply_const_vcc((a3, ))
+        self.blocks_multiply_const_vxx_0_1_0_0_0_0_0_0_0_0 = blocks.multiply_const_vcc((ScalingForPA*DPD123_1, ))
+        self.blocks_multiply_const_vxx_0_1_0_0_0_0_0_0_0 = blocks.multiply_const_vcc((ScalingForPA*DPD123_0, ))
+        self.blocks_multiply_const_vxx_0_1_0_0_0_0_0_0 = blocks.multiply_const_vcc((ScalingForPA*DPD123, ))
         self.blocks_multiply_const_vxx_0_1_0_0_0_0_0 = blocks.multiply_const_vcc((ScalingForPA*DPD21_3, ))
         self.blocks_multiply_const_vxx_0_1_0_0_0_0 = blocks.multiply_const_vcc((ScalingForPA*DPD32_3, ))
         self.blocks_multiply_const_vxx_0_1_0_0_0 = blocks.multiply_const_vcc((ScalingForPA*DPD31_3, ))
         self.blocks_multiply_const_vxx_0_1_0_0 = blocks.multiply_const_vcc((ScalingForPA*DPD12_3, ))
         self.blocks_multiply_const_vxx_0_1_0 = blocks.multiply_const_vcc((ScalingForPA*DPD23_3, ))
         self.blocks_multiply_const_vxx_0_1 = blocks.multiply_const_vcc((ScalingForPA*DPD13_3, ))
+        self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_1_0 = blocks.multiply_const_vcc((ScalingForPA*DPD123_1, ))
+        self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_1 = blocks.multiply_const_vcc((ScalingForPA*DPD123_0, ))
+        self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_0_0_0 = blocks.multiply_const_vcc((ScalingForPA*DPD123_1, ))
+        self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_0_0 = blocks.multiply_const_vcc((ScalingForPA*DPD123_0, ))
+        self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_0 = blocks.multiply_const_vcc((ScalingForPA*DPD123, ))
+        self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0 = blocks.multiply_const_vcc((ScalingForPA*DPD123, ))
         self.blocks_multiply_const_vxx_0_0_0_0_0_0_0 = blocks.multiply_const_vcc((ScalingForPA*DPD21_3, ))
         self.blocks_multiply_const_vxx_0_0_0_0_0_0 = blocks.multiply_const_vcc((ScalingForPA*DPD32_3, ))
         self.blocks_multiply_const_vxx_0_0_0_0_0 = blocks.multiply_const_vcc((ScalingForPA*DPD31_3, ))
@@ -287,6 +326,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_multiply_const_vxx_0_0_0 = blocks.multiply_const_vcc((ScalingForPA*DPD23_3, ))
         self.blocks_multiply_const_vxx_0_0 = blocks.multiply_const_vcc((ScalingForPA*DPD13_3, ))
         self.blocks_multiply_const_vxx_0 = blocks.multiply_const_vcc((ScalingForPA, ))
+        self.blocks_float_to_complex_1_0_0_0_0_0_0_0_0_0 = blocks.float_to_complex(1)
+        self.blocks_float_to_complex_1_0_0_0_0_0_0_0_0 = blocks.float_to_complex(1)
         self.blocks_float_to_complex_1_0_0_0_0_0_0_0 = blocks.float_to_complex(1)
         self.blocks_float_to_complex_1_0_0_0_0_0 = blocks.float_to_complex(1)
         self.blocks_float_to_complex_1_0_0_0_0 = blocks.float_to_complex(1)
@@ -297,12 +338,14 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_float_to_complex_0_0_0 = blocks.float_to_complex(1)
         self.blocks_float_to_complex_0_0 = blocks.float_to_complex(1)
         self.blocks_float_to_complex_0 = blocks.float_to_complex(1)
-        self.blocks_file_source_0_1_0 = blocks.file_source(gr.sizeof_float*1, "/home/chance/Documents/Git/GNURadioDPD/InputData/CC3_real.bin", True)
-        self.blocks_file_source_0_1 = blocks.file_source(gr.sizeof_float*1, "/home/chance/Documents/Git/GNURadioDPD/InputData/CC2_real.bin", True)
-        self.blocks_file_source_0_0_1 = blocks.file_source(gr.sizeof_float*1, "/home/chance/Documents/Git/GNURadioDPD/InputData/CC3_imag.bin", True)
-        self.blocks_file_source_0_0_0 = blocks.file_source(gr.sizeof_float*1, "/home/chance/Documents/Git/GNURadioDPD/InputData/CC1_imag.bin", True)
-        self.blocks_file_source_0_0 = blocks.file_source(gr.sizeof_float*1, "/home/chance/Documents/Git/GNURadioDPD/InputData/CC1_imag.bin", True)
-        self.blocks_file_source_0 = blocks.file_source(gr.sizeof_float*1, "/home/chance/Documents/Git/GNURadioDPD/InputData/CC1_real.bin", True)
+        self.blocks_file_source_0_1_0 = blocks.file_source(gr.sizeof_float*1, "/home/chance/Github/GNURadioDPD/InputData/CC3_real.bin", True)
+        self.blocks_file_source_0_1 = blocks.file_source(gr.sizeof_float*1, "/home/chance/Github/GNURadioDPD/InputData/CC2_real.bin", True)
+        self.blocks_file_source_0_0_1 = blocks.file_source(gr.sizeof_float*1, "/home/chance/Github/GNURadioDPD/InputData/CC3_imag.bin", True)
+        self.blocks_file_source_0_0_0 = blocks.file_source(gr.sizeof_float*1, "/home/chance/Github/GNURadioDPD/InputData/CC2_imag.bin", True)
+        self.blocks_file_source_0_0 = blocks.file_source(gr.sizeof_float*1, "/home/chance/Github/GNURadioDPD/InputData/CC1_imag.bin", True)
+        self.blocks_file_source_0 = blocks.file_source(gr.sizeof_float*1, "/home/chance/Github/GNURadioDPD/InputData/CC1_real.bin", True)
+        self.blocks_conjugate_cc_3_0_0 = blocks.conjugate_cc()
+        self.blocks_conjugate_cc_3_0 = blocks.conjugate_cc()
         self.blocks_conjugate_cc_3 = blocks.conjugate_cc()
         self.blocks_conjugate_cc_0_0_0_0_0_0 = blocks.conjugate_cc()
         self.blocks_conjugate_cc_0_0_0_0_0 = blocks.conjugate_cc()
@@ -312,12 +355,16 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_conjugate_cc_0 = blocks.conjugate_cc()
         self.blocks_add_xx_0_0 = blocks.add_vcc(1)
         self.blocks_add_xx_0 = blocks.add_vcc(1)
+        self.analog_const_source_x_0_1_0_0_0_0_0_0_0_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, dpd13_real*2)
+        self.analog_const_source_x_0_1_0_0_0_0_0_0_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, dpd13_real*2)
         self.analog_const_source_x_0_1_0_0_0_0_0_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, dpd13_real*2)
         self.analog_const_source_x_0_1_0_0_0_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, dpd13_real)
         self.analog_const_source_x_0_1_0_0_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, dpd13_real)
         self.analog_const_source_x_0_1_0_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, dpd13_real)
         self.analog_const_source_x_0_1_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, dpd13_real)
         self.analog_const_source_x_0_1 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, dpd13_real)
+        self.analog_const_source_x_0_0_0_0_0_0_0_0_0_0_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, dpd13_imag*2)
+        self.analog_const_source_x_0_0_0_0_0_0_0_0_0_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, dpd13_imag*2)
         self.analog_const_source_x_0_0_0_0_0_0_0_0_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, dpd13_imag*2)
         self.analog_const_source_x_0_0_0_0_0_0_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, dpd13_imag)
         self.analog_const_source_x_0_0_0_0_0_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, dpd13_imag)
@@ -327,6 +374,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self.analog_const_source_x_0_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, dpd13_imag)
         self.analog_const_source_x_0 = analog.sig_source_f(0, analog.GR_CONST_WAVE, 0, 0, dpd13_real)
         self.Test_TotalFreqShift_0_1 = Test.TotalFreqShift(f1*1000000, samp_rate, 1)
+        self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0_0_0_0_0 = Test.TotalFreqShift((f1+f2-f3)*1000000, systemfs, 1)
+        self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0_0_0_0 = Test.TotalFreqShift((f1-f2+f3)*1000000, systemfs, 1)
         self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0_0_0 = Test.TotalFreqShift((-f1+f2+f3)*1000000, systemfs, 1)
         self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0 = Test.TotalFreqShift((2*f1-f2)*1000000, systemfs, 1)
         self.Test_TotalFreqShift_0_0_0_0_0_0_0_0 = Test.TotalFreqShift((2*f2-f3)*1000000, systemfs, 1)
@@ -336,12 +385,14 @@ class top_block(gr.top_block, Qt.QWidget):
         self.Test_TotalFreqShift_0_0_0_0 = Test.TotalFreqShift((2*f3-f1)*1000000, systemfs, 1)
         self.Test_TotalFreqShift_0_0 = Test.TotalFreqShift(f2*1000000, samp_rate, 1)
         self.Test_TotalFreqShift_0 = Test.TotalFreqShift(f3*1000000, samp_rate, 1)
+        self.Test_ConfigurablePA_0_0 = Test.ConfigurablePA(complex(beta1_real,beta1_imag), complex(beta3_real,beta3_imag), complex(beta5_real,beta5_imag), complex(beta7_real,beta7_imag), 0)
         self.Test_ConfigurablePA_0 = Test.ConfigurablePA(complex(beta1_real,beta1_imag), complex(beta3_real,beta3_imag), complex(beta5_real,beta5_imag), complex(beta7_real,beta7_imag), 0)
 
         ##################################################
         # Connections
         ##################################################
         self.connect((self.Test_ConfigurablePA_0, 0), (self.qtgui_freq_sink_x_0, 1))    
+        self.connect((self.Test_ConfigurablePA_0_0, 0), (self.qtgui_freq_sink_x_0, 0))    
         self.connect((self.Test_TotalFreqShift_0, 0), (self.blocks_multiply_xx_3_0_0, 1))    
         self.connect((self.Test_TotalFreqShift_0_0, 0), (self.blocks_multiply_xx_3_0_0_0, 1))    
         self.connect((self.Test_TotalFreqShift_0_0_0_0, 0), (self.blocks_multiply_xx_3_0, 1))    
@@ -351,6 +402,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.Test_TotalFreqShift_0_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_3_0_1_0_0_0, 1))    
         self.connect((self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_3_0_1_0_0_0_0, 1))    
         self.connect((self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_5, 0))    
+        self.connect((self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_5_0, 0))    
+        self.connect((self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_5_0_0, 0))    
         self.connect((self.Test_TotalFreqShift_0_1, 0), (self.blocks_multiply_xx_3_0_0_1, 1))    
         self.connect((self.analog_const_source_x_0, 0), (self.blocks_float_to_complex_1, 0))    
         self.connect((self.analog_const_source_x_0_0, 0), (self.blocks_float_to_complex_1, 1))    
@@ -360,12 +413,16 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.analog_const_source_x_0_0_0_0_0_0, 0), (self.blocks_float_to_complex_1_0_0_0_0, 1))    
         self.connect((self.analog_const_source_x_0_0_0_0_0_0_0, 0), (self.blocks_float_to_complex_1_0_0_0_0_0, 1))    
         self.connect((self.analog_const_source_x_0_0_0_0_0_0_0_0_0, 0), (self.blocks_float_to_complex_1_0_0_0_0_0_0_0, 1))    
+        self.connect((self.analog_const_source_x_0_0_0_0_0_0_0_0_0_0, 0), (self.blocks_float_to_complex_1_0_0_0_0_0_0_0_0, 1))    
+        self.connect((self.analog_const_source_x_0_0_0_0_0_0_0_0_0_0_0, 0), (self.blocks_float_to_complex_1_0_0_0_0_0_0_0_0_0, 1))    
         self.connect((self.analog_const_source_x_0_1, 0), (self.blocks_float_to_complex_1_0, 0))    
         self.connect((self.analog_const_source_x_0_1_0, 0), (self.blocks_float_to_complex_1_0_0, 0))    
         self.connect((self.analog_const_source_x_0_1_0_0, 0), (self.blocks_float_to_complex_1_0_0_0, 0))    
         self.connect((self.analog_const_source_x_0_1_0_0_0, 0), (self.blocks_float_to_complex_1_0_0_0_0, 0))    
         self.connect((self.analog_const_source_x_0_1_0_0_0_0, 0), (self.blocks_float_to_complex_1_0_0_0_0_0, 0))    
         self.connect((self.analog_const_source_x_0_1_0_0_0_0_0_0, 0), (self.blocks_float_to_complex_1_0_0_0_0_0_0_0, 0))    
+        self.connect((self.analog_const_source_x_0_1_0_0_0_0_0_0_0, 0), (self.blocks_float_to_complex_1_0_0_0_0_0_0_0_0, 0))    
+        self.connect((self.analog_const_source_x_0_1_0_0_0_0_0_0_0_0, 0), (self.blocks_float_to_complex_1_0_0_0_0_0_0_0_0_0, 0))    
         self.connect((self.blocks_add_xx_0, 0), (self.blocks_multiply_const_vxx_0, 0))    
         self.connect((self.blocks_add_xx_0_0, 0), (self.Test_ConfigurablePA_0, 0))    
         self.connect((self.blocks_conjugate_cc_0, 0), (self.blocks_multiply_xx_2, 1))    
@@ -375,29 +432,37 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_conjugate_cc_0_0_0_0_0, 0), (self.blocks_multiply_xx_2_0_0_0_0, 1))    
         self.connect((self.blocks_conjugate_cc_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_2_0_0_0_0_0, 1))    
         self.connect((self.blocks_conjugate_cc_3, 0), (self.blocks_multiply_xx_2_0_0_0_0_0_0_0, 2))    
+        self.connect((self.blocks_conjugate_cc_3_0, 0), (self.blocks_multiply_xx_2_0_0_0_0_0_0_0_0, 1))    
+        self.connect((self.blocks_conjugate_cc_3_0_0, 0), (self.blocks_multiply_xx_2_0_0_0_0_0_0_0_0_0, 0))    
         self.connect((self.blocks_file_source_0, 0), (self.blocks_float_to_complex_0, 0))    
         self.connect((self.blocks_file_source_0_0, 0), (self.blocks_float_to_complex_0, 1))    
         self.connect((self.blocks_file_source_0_0_0, 0), (self.blocks_float_to_complex_0_0, 1))    
         self.connect((self.blocks_file_source_0_0_1, 0), (self.blocks_float_to_complex_0_0_0, 1))    
         self.connect((self.blocks_file_source_0_1, 0), (self.blocks_float_to_complex_0_0, 0))    
         self.connect((self.blocks_file_source_0_1_0, 0), (self.blocks_float_to_complex_0_0_0, 0))    
-        self.connect((self.blocks_float_to_complex_0, 0), (self.blocks_conjugate_cc_3, 0))    
         self.connect((self.blocks_float_to_complex_0, 0), (self.blocks_multiply_const_vxx_0_0_0_0_0, 0))    
         self.connect((self.blocks_float_to_complex_0, 0), (self.blocks_multiply_const_vxx_0_0_0_0_0_0_0, 0))    
         self.connect((self.blocks_float_to_complex_0, 0), (self.blocks_multiply_const_vxx_0_1, 0))    
         self.connect((self.blocks_float_to_complex_0, 0), (self.blocks_multiply_const_vxx_0_1_0_0, 0))    
+        self.connect((self.blocks_float_to_complex_0, 0), (self.blocks_multiply_const_vxx_0_1_0_0_0_0_0_0, 0))    
+        self.connect((self.blocks_float_to_complex_0, 0), (self.blocks_multiply_const_vxx_0_1_0_0_0_0_0_0_0, 0))    
+        self.connect((self.blocks_float_to_complex_0, 0), (self.blocks_multiply_const_vxx_0_1_0_0_0_0_0_0_0_0, 0))    
         self.connect((self.blocks_float_to_complex_0, 0), (self.blocks_multiply_xx_3_0_0_1, 0))    
         self.connect((self.blocks_float_to_complex_0_0, 0), (self.blocks_multiply_const_vxx_0_0_0_0, 0))    
         self.connect((self.blocks_float_to_complex_0_0, 0), (self.blocks_multiply_const_vxx_0_0_0_0_0_0, 0))    
+        self.connect((self.blocks_float_to_complex_0_0, 0), (self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0, 0))    
+        self.connect((self.blocks_float_to_complex_0_0, 0), (self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_1, 0))    
+        self.connect((self.blocks_float_to_complex_0_0, 0), (self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_1_0, 0))    
         self.connect((self.blocks_float_to_complex_0_0, 0), (self.blocks_multiply_const_vxx_0_1_0, 0))    
         self.connect((self.blocks_float_to_complex_0_0, 0), (self.blocks_multiply_const_vxx_0_1_0_0_0_0_0, 0))    
-        self.connect((self.blocks_float_to_complex_0_0, 0), (self.blocks_multiply_xx_2_0_0_0_0_0_0_0, 1))    
         self.connect((self.blocks_float_to_complex_0_0, 0), (self.blocks_multiply_xx_3_0_0_0, 0))    
         self.connect((self.blocks_float_to_complex_0_0_0, 0), (self.blocks_multiply_const_vxx_0_0, 0))    
         self.connect((self.blocks_float_to_complex_0_0_0, 0), (self.blocks_multiply_const_vxx_0_0_0, 0))    
+        self.connect((self.blocks_float_to_complex_0_0_0, 0), (self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_0, 0))    
+        self.connect((self.blocks_float_to_complex_0_0_0, 0), (self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_0_0, 0))    
+        self.connect((self.blocks_float_to_complex_0_0_0, 0), (self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_0_0_0, 0))    
         self.connect((self.blocks_float_to_complex_0_0_0, 0), (self.blocks_multiply_const_vxx_0_1_0_0_0, 0))    
         self.connect((self.blocks_float_to_complex_0_0_0, 0), (self.blocks_multiply_const_vxx_0_1_0_0_0_0, 0))    
-        self.connect((self.blocks_float_to_complex_0_0_0, 0), (self.blocks_multiply_xx_2_0_0_0_0_0_0_0, 0))    
         self.connect((self.blocks_float_to_complex_0_0_0, 0), (self.blocks_multiply_xx_3_0_0, 0))    
         self.connect((self.blocks_float_to_complex_1, 0), (self.blocks_multiply_xx_4, 0))    
         self.connect((self.blocks_float_to_complex_1_0, 0), (self.blocks_multiply_xx_4_0, 0))    
@@ -406,6 +471,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_float_to_complex_1_0_0_0_0, 0), (self.blocks_multiply_xx_4_0_0_0_0, 0))    
         self.connect((self.blocks_float_to_complex_1_0_0_0_0_0, 0), (self.blocks_multiply_xx_4_0_0_0_0_0, 0))    
         self.connect((self.blocks_float_to_complex_1_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_0, 0))    
+        self.connect((self.blocks_float_to_complex_1_0_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_0_0, 0))    
+        self.connect((self.blocks_float_to_complex_1_0_0_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_0_0_0, 0))    
         self.connect((self.blocks_multiply_const_vxx_0, 0), (self.blocks_throttle_0, 0))    
         self.connect((self.blocks_multiply_const_vxx_0_0, 0), (self.blocks_multiply_xx_1, 0))    
         self.connect((self.blocks_multiply_const_vxx_0_0, 0), (self.blocks_multiply_xx_1, 1))    
@@ -419,16 +486,27 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_multiply_const_vxx_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_1_0_0_0_0, 1))    
         self.connect((self.blocks_multiply_const_vxx_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_1_0_0_0_0_0, 0))    
         self.connect((self.blocks_multiply_const_vxx_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_1_0_0_0_0_0, 1))    
+        self.connect((self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_2_0_0_0_0_0_0_0, 1))    
+        self.connect((self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_2_0_0_0_0_0_0_0, 0))    
+        self.connect((self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_2_0_0_0_0_0_0_0_0, 0))    
+        self.connect((self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_0_0_0, 0), (self.blocks_conjugate_cc_3_0_0, 0))    
+        self.connect((self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_1, 0), (self.blocks_conjugate_cc_3_0, 0))    
+        self.connect((self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_1_0, 0), (self.blocks_multiply_xx_2_0_0_0_0_0_0_0_0_0, 1))    
         self.connect((self.blocks_multiply_const_vxx_0_1, 0), (self.blocks_conjugate_cc_0, 0))    
         self.connect((self.blocks_multiply_const_vxx_0_1_0, 0), (self.blocks_conjugate_cc_0_0, 0))    
         self.connect((self.blocks_multiply_const_vxx_0_1_0_0, 0), (self.blocks_conjugate_cc_0_0_0, 0))    
         self.connect((self.blocks_multiply_const_vxx_0_1_0_0_0, 0), (self.blocks_conjugate_cc_0_0_0_0, 0))    
         self.connect((self.blocks_multiply_const_vxx_0_1_0_0_0_0, 0), (self.blocks_conjugate_cc_0_0_0_0_0, 0))    
         self.connect((self.blocks_multiply_const_vxx_0_1_0_0_0_0_0, 0), (self.blocks_conjugate_cc_0_0_0_0_0_0, 0))    
+        self.connect((self.blocks_multiply_const_vxx_0_1_0_0_0_0_0_0, 0), (self.blocks_conjugate_cc_3, 0))    
+        self.connect((self.blocks_multiply_const_vxx_0_1_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_2_0_0_0_0_0_0_0_0, 2))    
+        self.connect((self.blocks_multiply_const_vxx_0_1_0_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_2_0_0_0_0_0_0_0_0_0, 2))    
         self.connect((self.blocks_multiply_const_vxx_2_0, 0), (self.blocks_add_xx_0, 2))    
         self.connect((self.blocks_multiply_const_vxx_2_1, 0), (self.blocks_add_xx_0, 1))    
         self.connect((self.blocks_multiply_const_vxx_2_2_0, 0), (self.blocks_add_xx_0, 0))    
         self.connect((self.blocks_multiply_xx_0, 0), (self.blocks_multiply_xx_5, 1))    
+        self.connect((self.blocks_multiply_xx_0_0, 0), (self.blocks_multiply_xx_5_0, 1))    
+        self.connect((self.blocks_multiply_xx_0_0_0, 0), (self.blocks_multiply_xx_5_0_0, 1))    
         self.connect((self.blocks_multiply_xx_1, 0), (self.blocks_multiply_xx_2, 0))    
         self.connect((self.blocks_multiply_xx_1_0, 0), (self.blocks_multiply_xx_2_0, 0))    
         self.connect((self.blocks_multiply_xx_1_0_0, 0), (self.blocks_multiply_xx_2_0_0, 0))    
@@ -442,6 +520,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_multiply_xx_2_0_0_0_0, 0), (self.blocks_multiply_xx_4_0_0_0_0, 1))    
         self.connect((self.blocks_multiply_xx_2_0_0_0_0_0, 0), (self.blocks_multiply_xx_4_0_0_0_0_0, 1))    
         self.connect((self.blocks_multiply_xx_2_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_0, 1))    
+        self.connect((self.blocks_multiply_xx_2_0_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_0_0, 1))    
+        self.connect((self.blocks_multiply_xx_2_0_0_0_0_0_0_0_0_0, 0), (self.blocks_multiply_xx_0_0_0, 1))    
         self.connect((self.blocks_multiply_xx_3_0, 0), (self.blocks_add_xx_0_0, 1))    
         self.connect((self.blocks_multiply_xx_3_0_0, 0), (self.blocks_multiply_const_vxx_2_0, 0))    
         self.connect((self.blocks_multiply_xx_3_0_0_0, 0), (self.blocks_multiply_const_vxx_2_1, 0))    
@@ -458,7 +538,9 @@ class top_block(gr.top_block, Qt.QWidget):
         self.connect((self.blocks_multiply_xx_4_0_0_0_0, 0), (self.blocks_multiply_xx_3_0_1_0_0_0, 0))    
         self.connect((self.blocks_multiply_xx_4_0_0_0_0_0, 0), (self.blocks_multiply_xx_3_0_1_0_0_0_0, 0))    
         self.connect((self.blocks_multiply_xx_5, 0), (self.blocks_add_xx_0_0, 7))    
-        self.connect((self.blocks_multiply_xx_5, 0), (self.qtgui_freq_sink_x_0, 0))    
+        self.connect((self.blocks_multiply_xx_5_0, 0), (self.blocks_add_xx_0_0, 8))    
+        self.connect((self.blocks_multiply_xx_5_0_0, 0), (self.blocks_add_xx_0_0, 9))    
+        self.connect((self.blocks_throttle_0, 0), (self.Test_ConfigurablePA_0_0, 0))    
         self.connect((self.blocks_throttle_0, 0), (self.blocks_add_xx_0_0, 0))    
 
     def closeEvent(self, event):
@@ -474,6 +556,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.beta3_real = beta3_real
         self.set_dpd13_real(-self.beta3_real)
         self.Test_ConfigurablePA_0. set_beta3(complex(self.beta3_real,self.beta3_imag))
+        self.Test_ConfigurablePA_0_0. set_beta3(complex(self.beta3_real,self.beta3_imag))
 
     def get_beta3_imag(self):
         return self.beta3_imag
@@ -482,6 +565,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self.beta3_imag = beta3_imag
         self.set_dpd13_imag(-self.beta3_imag)
         self.Test_ConfigurablePA_0. set_beta3(complex(self.beta3_real,self.beta3_imag))
+        self.Test_ConfigurablePA_0_0. set_beta3(complex(self.beta3_real,self.beta3_imag))
 
     def get_systemfs(self):
         return self.systemfs
@@ -514,6 +598,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self.Test_TotalFreqShift_0_0_0_0_0_0_0. set_shift_freq((2*self.f1-self.f3)*1000000) 
         self.Test_TotalFreqShift_0_0_0_0_0_0_0_0. set_shift_freq((2*self.f2-self.f3)*1000000) 
         self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0_0_0. set_shift_freq((-self.f1+self.f2+self.f3)*1000000) 
+        self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0_0_0_0. set_shift_freq((self.f1-self.f2+self.f3)*1000000) 
+        self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0_0_0_0_0. set_shift_freq((self.f1+self.f2-self.f3)*1000000) 
 
     def get_f2(self):
         return self.f2
@@ -526,6 +612,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self.Test_TotalFreqShift_0_0_0_0_0_0_0_0. set_shift_freq((2*self.f2-self.f3)*1000000) 
         self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0. set_shift_freq((2*self.f1-self.f2)*1000000) 
         self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0_0_0. set_shift_freq((-self.f1+self.f2+self.f3)*1000000) 
+        self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0_0_0_0. set_shift_freq((self.f1-self.f2+self.f3)*1000000) 
+        self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0_0_0_0_0. set_shift_freq((self.f1+self.f2-self.f3)*1000000) 
 
     def get_f1(self):
         return self.f1
@@ -536,8 +624,10 @@ class top_block(gr.top_block, Qt.QWidget):
         self.Test_TotalFreqShift_0_0_0_0_0_0. set_shift_freq((2*self.f2-self.f1)*1000000) 
         self.Test_TotalFreqShift_0_0_0_0_0_0_0. set_shift_freq((2*self.f1-self.f3)*1000000) 
         self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0. set_shift_freq((2*self.f1-self.f2)*1000000) 
-        self.Test_TotalFreqShift_0_1. set_shift_freq(self.f1*1000000) 
         self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0_0_0. set_shift_freq((-self.f1+self.f2+self.f3)*1000000) 
+        self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0_0_0_0. set_shift_freq((self.f1-self.f2+self.f3)*1000000) 
+        self.Test_TotalFreqShift_0_1. set_shift_freq(self.f1*1000000) 
+        self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0_0_0_0_0. set_shift_freq((self.f1+self.f2-self.f3)*1000000) 
 
     def get_dpd13_real(self):
         return self.dpd13_real
@@ -551,6 +641,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self.analog_const_source_x_0_1_0_0_0.set_offset(self.dpd13_real)
         self.analog_const_source_x_0_1_0_0_0_0.set_offset(self.dpd13_real)
         self.analog_const_source_x_0_1_0_0_0_0_0_0.set_offset(self.dpd13_real*2)
+        self.analog_const_source_x_0_1_0_0_0_0_0_0_0.set_offset(self.dpd13_real*2)
+        self.analog_const_source_x_0_1_0_0_0_0_0_0_0_0.set_offset(self.dpd13_real*2)
 
     def get_dpd13_imag(self):
         return self.dpd13_imag
@@ -564,6 +656,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self.analog_const_source_x_0_0_0_0_0_0.set_offset(self.dpd13_imag)
         self.analog_const_source_x_0_0_0_0_0_0_0.set_offset(self.dpd13_imag)
         self.analog_const_source_x_0_0_0_0_0_0_0_0_0.set_offset(self.dpd13_imag*2)
+        self.analog_const_source_x_0_0_0_0_0_0_0_0_0_0.set_offset(self.dpd13_imag*2)
+        self.analog_const_source_x_0_0_0_0_0_0_0_0_0_0_0.set_offset(self.dpd13_imag*2)
 
     def get_beta7_real(self):
         return self.beta7_real
@@ -571,6 +665,7 @@ class top_block(gr.top_block, Qt.QWidget):
     def set_beta7_real(self, beta7_real):
         self.beta7_real = beta7_real
         self.Test_ConfigurablePA_0. set_beta7(complex(self.beta7_real,self.beta7_imag))
+        self.Test_ConfigurablePA_0_0. set_beta7(complex(self.beta7_real,self.beta7_imag))
 
     def get_beta7_imag(self):
         return self.beta7_imag
@@ -578,6 +673,7 @@ class top_block(gr.top_block, Qt.QWidget):
     def set_beta7_imag(self, beta7_imag):
         self.beta7_imag = beta7_imag
         self.Test_ConfigurablePA_0. set_beta7(complex(self.beta7_real,self.beta7_imag))
+        self.Test_ConfigurablePA_0_0. set_beta7(complex(self.beta7_real,self.beta7_imag))
 
     def get_beta5_real(self):
         return self.beta5_real
@@ -585,6 +681,7 @@ class top_block(gr.top_block, Qt.QWidget):
     def set_beta5_real(self, beta5_real):
         self.beta5_real = beta5_real
         self.Test_ConfigurablePA_0. set_beta5(complex(self.beta5_real,self.beta5_imag))
+        self.Test_ConfigurablePA_0_0. set_beta5(complex(self.beta5_real,self.beta5_imag))
 
     def get_beta5_imag(self):
         return self.beta5_imag
@@ -592,6 +689,7 @@ class top_block(gr.top_block, Qt.QWidget):
     def set_beta5_imag(self, beta5_imag):
         self.beta5_imag = beta5_imag
         self.Test_ConfigurablePA_0. set_beta5(complex(self.beta5_real,self.beta5_imag))
+        self.Test_ConfigurablePA_0_0. set_beta5(complex(self.beta5_real,self.beta5_imag))
 
     def get_beta1_real(self):
         return self.beta1_real
@@ -599,6 +697,7 @@ class top_block(gr.top_block, Qt.QWidget):
     def set_beta1_real(self, beta1_real):
         self.beta1_real = beta1_real
         self.Test_ConfigurablePA_0. set_beta1(complex(self.beta1_real,self.beta1_imag))
+        self.Test_ConfigurablePA_0_0. set_beta1(complex(self.beta1_real,self.beta1_imag))
 
     def get_beta1_imag(self):
         return self.beta1_imag
@@ -606,6 +705,7 @@ class top_block(gr.top_block, Qt.QWidget):
     def set_beta1_imag(self, beta1_imag):
         self.beta1_imag = beta1_imag
         self.Test_ConfigurablePA_0. set_beta1(complex(self.beta1_real,self.beta1_imag))
+        self.Test_ConfigurablePA_0_0. set_beta1(complex(self.beta1_real,self.beta1_imag))
 
     def get_alpha_real(self):
         return self.alpha_real
@@ -652,12 +752,21 @@ class top_block(gr.top_block, Qt.QWidget):
         self.blocks_multiply_const_vxx_0_0_0_0_0.set_k((self.ScalingForPA*self.DPD31_3, ))
         self.blocks_multiply_const_vxx_0_0_0_0_0_0.set_k((self.ScalingForPA*self.DPD32_3, ))
         self.blocks_multiply_const_vxx_0_0_0_0_0_0_0.set_k((self.ScalingForPA*self.DPD21_3, ))
+        self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0.set_k((self.ScalingForPA*self.DPD123, ))
+        self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_0.set_k((self.ScalingForPA*self.DPD123, ))
+        self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_0_0.set_k((self.ScalingForPA*self.DPD123_0, ))
+        self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_0_0_0.set_k((self.ScalingForPA*self.DPD123_1, ))
+        self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_1.set_k((self.ScalingForPA*self.DPD123_0, ))
+        self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_1_0.set_k((self.ScalingForPA*self.DPD123_1, ))
         self.blocks_multiply_const_vxx_0_1.set_k((self.ScalingForPA*self.DPD13_3, ))
         self.blocks_multiply_const_vxx_0_1_0.set_k((self.ScalingForPA*self.DPD23_3, ))
         self.blocks_multiply_const_vxx_0_1_0_0.set_k((self.ScalingForPA*self.DPD12_3, ))
         self.blocks_multiply_const_vxx_0_1_0_0_0.set_k((self.ScalingForPA*self.DPD31_3, ))
         self.blocks_multiply_const_vxx_0_1_0_0_0_0.set_k((self.ScalingForPA*self.DPD32_3, ))
         self.blocks_multiply_const_vxx_0_1_0_0_0_0_0.set_k((self.ScalingForPA*self.DPD21_3, ))
+        self.blocks_multiply_const_vxx_0_1_0_0_0_0_0_0.set_k((self.ScalingForPA*self.DPD123, ))
+        self.blocks_multiply_const_vxx_0_1_0_0_0_0_0_0_0.set_k((self.ScalingForPA*self.DPD123_0, ))
+        self.blocks_multiply_const_vxx_0_1_0_0_0_0_0_0_0_0.set_k((self.ScalingForPA*self.DPD123_1, ))
 
     def get_LoopDelay(self):
         return self.LoopDelay
@@ -718,6 +827,36 @@ class top_block(gr.top_block, Qt.QWidget):
         self._DPD12_3_callback(self.DPD12_3)
         self.blocks_multiply_const_vxx_0_0_0_0.set_k((self.ScalingForPA*self.DPD12_3, ))
         self.blocks_multiply_const_vxx_0_1_0_0.set_k((self.ScalingForPA*self.DPD12_3, ))
+
+    def get_DPD123_1(self):
+        return self.DPD123_1
+
+    def set_DPD123_1(self, DPD123_1):
+        self.DPD123_1 = DPD123_1
+        self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_0_0_0.set_k((self.ScalingForPA*self.DPD123_1, ))
+        self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_1_0.set_k((self.ScalingForPA*self.DPD123_1, ))
+        self.blocks_multiply_const_vxx_0_1_0_0_0_0_0_0_0_0.set_k((self.ScalingForPA*self.DPD123_1, ))
+        self._DPD123_1_callback(self.DPD123_1)
+
+    def get_DPD123_0(self):
+        return self.DPD123_0
+
+    def set_DPD123_0(self, DPD123_0):
+        self.DPD123_0 = DPD123_0
+        self._DPD123_0_callback(self.DPD123_0)
+        self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_0_0.set_k((self.ScalingForPA*self.DPD123_0, ))
+        self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_1.set_k((self.ScalingForPA*self.DPD123_0, ))
+        self.blocks_multiply_const_vxx_0_1_0_0_0_0_0_0_0.set_k((self.ScalingForPA*self.DPD123_0, ))
+
+    def get_DPD123(self):
+        return self.DPD123
+
+    def set_DPD123(self, DPD123):
+        self.DPD123 = DPD123
+        self._DPD123_callback(self.DPD123)
+        self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0.set_k((self.ScalingForPA*self.DPD123, ))
+        self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_0.set_k((self.ScalingForPA*self.DPD123, ))
+        self.blocks_multiply_const_vxx_0_1_0_0_0_0_0_0.set_k((self.ScalingForPA*self.DPD123, ))
 
 
 def main(top_block_cls=top_block, options=None):
