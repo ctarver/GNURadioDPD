@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Fri Mar 10 17:05:22 2017
+# Generated: Fri Mar 10 19:41:05 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -626,8 +626,8 @@ class top_block(gr.top_block, Qt.QWidget):
         self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0. set_shift_freq((2*self.f1-self.f2)*1000000) 
         self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0_0_0. set_shift_freq((-self.f1+self.f2+self.f3)*1000000) 
         self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0_0_0_0. set_shift_freq((self.f1-self.f2+self.f3)*1000000) 
-        self.Test_TotalFreqShift_0_1. set_shift_freq(self.f1*1000000) 
         self.Test_TotalFreqShift_0_0_0_0_0_0_0_0_0_0_0_0_0. set_shift_freq((self.f1+self.f2-self.f3)*1000000) 
+        self.Test_TotalFreqShift_0_1. set_shift_freq(self.f1*1000000) 
 
     def get_dpd13_real(self):
         return self.dpd13_real
@@ -833,10 +833,10 @@ class top_block(gr.top_block, Qt.QWidget):
 
     def set_DPD123_1(self, DPD123_1):
         self.DPD123_1 = DPD123_1
+        self._DPD123_1_callback(self.DPD123_1)
         self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_0_0_0.set_k((self.ScalingForPA*self.DPD123_1, ))
         self.blocks_multiply_const_vxx_0_0_0_0_0_0_0_0_1_0.set_k((self.ScalingForPA*self.DPD123_1, ))
         self.blocks_multiply_const_vxx_0_1_0_0_0_0_0_0_0_0.set_k((self.ScalingForPA*self.DPD123_1, ))
-        self._DPD123_1_callback(self.DPD123_1)
 
     def get_DPD123_0(self):
         return self.DPD123_0
