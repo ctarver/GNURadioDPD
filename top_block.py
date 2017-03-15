@@ -3,7 +3,7 @@
 ##################################################
 # GNU Radio Python Flow Graph
 # Title: Top Block
-# Generated: Wed Mar 15 13:53:45 2017
+# Generated: Wed Mar 15 13:57:35 2017
 ##################################################
 
 if __name__ == '__main__':
@@ -62,8 +62,6 @@ class top_block(gr.top_block, Qt.QWidget):
         ##################################################
         # Variables
         ##################################################
-        self.beta3_real = beta3_real = 0.02
-        self.beta3_imag = beta3_imag = 0.01
         self.variable_function_probe_0 = variable_function_probe_0 = 0
         self.systemfs = systemfs = 38400000
         self.samp_rate = samp_rate = 38400000
@@ -71,16 +69,16 @@ class top_block(gr.top_block, Qt.QWidget):
         self.f3 = f3 = 4
         self.f2 = f2 = -1
         self.f1 = f1 = -4
-        self.dpd13_real = dpd13_real = -beta3_real
-        self.dpd13_imag = dpd13_imag = -beta3_imag
+        self.dpd13_real = dpd13_real = 0
+        self.dpd13_imag = dpd13_imag = 0
         self.beta7_real = beta7_real = 0
         self.beta7_imag = beta7_imag = 0
         self.beta5_real = beta5_real = 0
         self.beta5_imag = beta5_imag = 0
+        self.beta3_real = beta3_real = 0.02
+        self.beta3_imag = beta3_imag = 0.01
         self.beta1_real = beta1_real = 1
         self.beta1_imag = beta1_imag = 0
-        self.alpha_real = alpha_real = 0
-        self.alpha_imag = alpha_imag = 0
         self.a3 = a3 = 1
         self.a2 = a2 = 1
         self.a1 = a1 = 1
@@ -116,12 +114,6 @@ class top_block(gr.top_block, Qt.QWidget):
         self.tab_layout_2.addLayout(self.tab_grid_layout_2)
         self.tab.addTab(self.tab_widget_2, "DPD")
         self.top_grid_layout.addWidget(self.tab, 2, 0, 3,4)
-        self._beta3_real_range = Range(-0.5, 0.5, 0.001, 0.02, 200)
-        self._beta3_real_win = RangeWidget(self._beta3_real_range, self.set_beta3_real, "beta3_real", "counter_slider", float)
-        self.tab_grid_layout_1.addWidget(self._beta3_real_win,  0, 1, 1, 1)
-        self._beta3_imag_range = Range(-1, 1, 0.001, 0.01, 200)
-        self._beta3_imag_win = RangeWidget(self._beta3_imag_range, self.set_beta3_imag, "beta3_imag", "counter_slider", float)
-        self.tab_grid_layout_1.addWidget(self._beta3_imag_win,  1, 1, 1, 1)
         self.probe_signal = blocks.probe_signal_c()
         self._f3_range = Range(-20, 20, 0.1, 4, 200)
         self._f3_win = RangeWidget(self._f3_range, self.set_f3, "f3", "counter_slider", float)
@@ -132,10 +124,10 @@ class top_block(gr.top_block, Qt.QWidget):
         self._f1_range = Range(-20, 20, 0.1, -4, 200)
         self._f1_win = RangeWidget(self._f1_range, self.set_f1, "f1", "counter_slider", float)
         self.tab_grid_layout_0.addWidget(self._f1_win,  0, 0, 1, 1)
-        self._dpd13_real_range = Range(-0.1, 0.1, 0.0001, -beta3_real, 200)
+        self._dpd13_real_range = Range(-0.1, 0.1, 0.0001, 0, 200)
         self._dpd13_real_win = RangeWidget(self._dpd13_real_range, self.set_dpd13_real, "dpd13_real", "counter_slider", float)
         self.tab_grid_layout_2.addWidget(self._dpd13_real_win,  0, 0, 1, 1)
-        self._dpd13_imag_range = Range(-0.1, 0.1, 0.0001, -beta3_imag, 200)
+        self._dpd13_imag_range = Range(-0.1, 0.1, 0.0001, 0, 200)
         self._dpd13_imag_win = RangeWidget(self._dpd13_imag_range, self.set_dpd13_imag, "dpd13_imag", "counter_slider", float)
         self.tab_grid_layout_2.addWidget(self._dpd13_imag_win,  1, 0, 1, 1)
         self._beta7_real_range = Range(-0.1, 0.1, 0.0001, 0, 200)
@@ -150,6 +142,12 @@ class top_block(gr.top_block, Qt.QWidget):
         self._beta5_imag_range = Range(-1, 1, 0.0001, 0, 200)
         self._beta5_imag_win = RangeWidget(self._beta5_imag_range, self.set_beta5_imag, "beta5_imag", "counter_slider", float)
         self.tab_grid_layout_1.addWidget(self._beta5_imag_win,  1, 2, 1, 1)
+        self._beta3_real_range = Range(-0.5, 0.5, 0.001, 0.02, 200)
+        self._beta3_real_win = RangeWidget(self._beta3_real_range, self.set_beta3_real, "beta3_real", "counter_slider", float)
+        self.tab_grid_layout_1.addWidget(self._beta3_real_win,  0, 1, 1, 1)
+        self._beta3_imag_range = Range(-1, 1, 0.001, 0.01, 200)
+        self._beta3_imag_win = RangeWidget(self._beta3_imag_range, self.set_beta3_imag, "beta3_imag", "counter_slider", float)
+        self.tab_grid_layout_1.addWidget(self._beta3_imag_win,  1, 1, 1, 1)
         self._beta1_real_range = Range(-1, 1, 0.01, 1, 200)
         self._beta1_real_win = RangeWidget(self._beta1_real_range, self.set_beta1_real, "beta1_real", "counter_slider", float)
         self.tab_grid_layout_1.addWidget(self._beta1_real_win,  0, 0, 1, 1)
@@ -639,24 +637,6 @@ class top_block(gr.top_block, Qt.QWidget):
         event.accept()
 
 
-    def get_beta3_real(self):
-        return self.beta3_real
-
-    def set_beta3_real(self, beta3_real):
-        self.beta3_real = beta3_real
-        self.set_dpd13_real(-self.beta3_real)
-        self.Test_ConfigurablePA_0. set_beta3(complex(self.beta3_real,self.beta3_imag))
-        self.Test_ConfigurablePA_0_0. set_beta3(complex(self.beta3_real,self.beta3_imag))
-
-    def get_beta3_imag(self):
-        return self.beta3_imag
-
-    def set_beta3_imag(self, beta3_imag):
-        self.beta3_imag = beta3_imag
-        self.set_dpd13_imag(-self.beta3_imag)
-        self.Test_ConfigurablePA_0. set_beta3(complex(self.beta3_real,self.beta3_imag))
-        self.Test_ConfigurablePA_0_0. set_beta3(complex(self.beta3_real,self.beta3_imag))
-
     def get_variable_function_probe_0(self):
         return self.variable_function_probe_0
 
@@ -791,6 +771,22 @@ class top_block(gr.top_block, Qt.QWidget):
         self.Test_ConfigurablePA_0. set_beta5(complex(self.beta5_real,self.beta5_imag))
         self.Test_ConfigurablePA_0_0. set_beta5(complex(self.beta5_real,self.beta5_imag))
 
+    def get_beta3_real(self):
+        return self.beta3_real
+
+    def set_beta3_real(self, beta3_real):
+        self.beta3_real = beta3_real
+        self.Test_ConfigurablePA_0. set_beta3(complex(self.beta3_real,self.beta3_imag))
+        self.Test_ConfigurablePA_0_0. set_beta3(complex(self.beta3_real,self.beta3_imag))
+
+    def get_beta3_imag(self):
+        return self.beta3_imag
+
+    def set_beta3_imag(self, beta3_imag):
+        self.beta3_imag = beta3_imag
+        self.Test_ConfigurablePA_0. set_beta3(complex(self.beta3_real,self.beta3_imag))
+        self.Test_ConfigurablePA_0_0. set_beta3(complex(self.beta3_real,self.beta3_imag))
+
     def get_beta1_real(self):
         return self.beta1_real
 
@@ -806,18 +802,6 @@ class top_block(gr.top_block, Qt.QWidget):
         self.beta1_imag = beta1_imag
         self.Test_ConfigurablePA_0. set_beta1(complex(self.beta1_real,self.beta1_imag))
         self.Test_ConfigurablePA_0_0. set_beta1(complex(self.beta1_real,self.beta1_imag))
-
-    def get_alpha_real(self):
-        return self.alpha_real
-
-    def set_alpha_real(self, alpha_real):
-        self.alpha_real = alpha_real
-
-    def get_alpha_imag(self):
-        return self.alpha_imag
-
-    def set_alpha_imag(self, alpha_imag):
-        self.alpha_imag = alpha_imag
 
     def get_a3(self):
         return self.a3
