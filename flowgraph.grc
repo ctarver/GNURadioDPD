@@ -1713,7 +1713,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>function_args</key>
@@ -1878,7 +1878,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2023,7 +2023,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -2580,7 +2580,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3801,7 +3801,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -3840,7 +3840,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4000,7 +4000,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4106,7 +4106,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/chance/Github/GNURadioDPD/InputData/CC1_real.bin</value>
+      <value>/home/chance/Documents/Git/GNURadioDPD/InputData/CC1_real.bin</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4161,7 +4161,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/chance/Github/GNURadioDPD/InputData/CC1_imag.bin</value>
+      <value>/home/chance/Documents/Git/GNURadioDPD/InputData/CC1_imag.bin</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4216,7 +4216,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/chance/Github/GNURadioDPD/InputData/CC2_imag.bin</value>
+      <value>/home/chance/Documents/Git/GNURadioDPD/InputData/CC2_imag.bin</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4271,7 +4271,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/chance/Github/GNURadioDPD/InputData/CC3_imag.bin</value>
+      <value>/home/chance/Documents/Git/GNURadioDPD/InputData/CC3_imag.bin</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4326,7 +4326,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/chance/Github/GNURadioDPD/InputData/CC2_real.bin</value>
+      <value>/home/chance/Documents/Git/GNURadioDPD/InputData/CC2_real.bin</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -4381,7 +4381,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>/home/chance/Github/GNURadioDPD/InputData/CC3_real.bin</value>
+      <value>/home/chance/Documents/Git/GNURadioDPD/InputData/CC3_real.bin</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -6074,7 +6074,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -7192,7 +7192,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -8220,7 +8220,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -8275,7 +8275,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -8326,7 +8326,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -8660,7 +8660,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -8668,7 +8668,7 @@
     </param>
     <param>
       <key>gui_hint</key>
-      <value>tab@1: 0, 0, 1, 1</value>
+      <value>1,0,1,4</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -9011,7 +9011,7 @@
     </param>
     <param>
       <key>gui_hint</key>
-      <value>1, 0, 3,4</value>
+      <value>2, 0, 3,4</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -9843,7 +9843,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -9870,7 +9870,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>0</value>
+      <value>1</value>
     </param>
     <param>
       <key>_coordinate</key>
