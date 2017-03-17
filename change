@@ -1,8 +1,10 @@
+BE SURE TO ADD This TO THE END OF THE FUNCTION!!!!!!!!!!!!!!
+
         def _variable_function_probe_0_probe():
             while True:
                 val = self.probe_signal.level()
                 self.set_dpd13_real(val.real)
-                self.set_dpd_imag(val.imag)
+                self.set_dpd13_imag(val.imag)
                 try:
                     self.set_variable_function_probe_0(val)
                 except AttributeError:
