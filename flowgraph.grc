@@ -1206,10 +1206,6 @@
       <value></value>
     </param>
     <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
@@ -1226,12 +1222,8 @@
       <value>Test_ConfigurablePA_0</value>
     </param>
     <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
+      <key>affinity</key>
+      <value></value>
     </param>
     <param>
       <key>beta1</key>
@@ -1253,6 +1245,14 @@
       <key>beta9</key>
       <value>0</value>
     </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
   </block>
   <block>
     <key>Test_MeanCorrelation</key>
@@ -1262,10 +1262,6 @@
     </param>
     <param>
       <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
       <value></value>
     </param>
     <param>
@@ -1285,6 +1281,10 @@
       <value>Test_MeanCorrelation_0</value>
     </param>
     <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
       <key>maxoutbuf</key>
       <value>0</value>
     </param>
@@ -1304,20 +1304,12 @@
       <value></value>
     </param>
     <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>direction</key>
-      <value>1</value>
-    </param>
-    <param>
       <key>_enabled</key>
       <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1264, 91)</value>
+      <value>(1232, 76)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1328,6 +1320,14 @@
       <value>Test_TotalFreqShift_0</value>
     </param>
     <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>direction</key>
+      <value>1</value>
+    </param>
+    <param>
       <key>maxoutbuf</key>
       <value>0</value>
     </param>
@@ -1336,12 +1336,12 @@
       <value>0</value>
     </param>
     <param>
-      <key>systemfs</key>
-      <value>systemfs</value>
-    </param>
-    <param>
       <key>shift_freq</key>
       <value>f1</value>
+    </param>
+    <param>
+      <key>systemfs</key>
+      <value>systemfs</value>
     </param>
   </block>
   <block>
@@ -1353,14 +1353,6 @@
     <param>
       <key>comment</key>
       <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>direction</key>
-      <value>-1</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -1379,6 +1371,14 @@
       <value>Test_TotalFreqShift_0_0_0</value>
     </param>
     <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>direction</key>
+      <value>-1</value>
+    </param>
+    <param>
       <key>maxoutbuf</key>
       <value>0</value>
     </param>
@@ -1387,12 +1387,12 @@
       <value>0</value>
     </param>
     <param>
-      <key>systemfs</key>
-      <value>systemfs</value>
-    </param>
-    <param>
       <key>shift_freq</key>
       <value>9000000*2</value>
+    </param>
+    <param>
+      <key>systemfs</key>
+      <value>systemfs</value>
     </param>
   </block>
   <block>
@@ -1404,14 +1404,6 @@
     <param>
       <key>comment</key>
       <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>direction</key>
-      <value>1</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -1430,6 +1422,14 @@
       <value>Test_TotalFreqShift_0_0_0_0</value>
     </param>
     <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>direction</key>
+      <value>1</value>
+    </param>
+    <param>
       <key>maxoutbuf</key>
       <value>0</value>
     </param>
@@ -1438,12 +1438,12 @@
       <value>0</value>
     </param>
     <param>
-      <key>systemfs</key>
-      <value>systemfs</value>
-    </param>
-    <param>
       <key>shift_freq</key>
       <value>0</value>
+    </param>
+    <param>
+      <key>systemfs</key>
+      <value>systemfs</value>
     </param>
   </block>
   <block>
@@ -1454,10 +1454,6 @@
     </param>
     <param>
       <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
       <value></value>
     </param>
     <param>
@@ -1475,6 +1471,10 @@
     <param>
       <key>id</key>
       <value>Test_W_LMS_0</value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
     </param>
     <param>
       <key>maxoutbuf</key>
